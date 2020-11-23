@@ -1,0 +1,26 @@
+{
+	"name": "fitness-club",
+	"version": "1.0.0",
+	"description": "A Fitness Company.",
+	"main": "main.js",
+	"scripts": {
+		"compile-sass": "node-sass css/sass/style.scss css/style.css -w"
+	},
+	"repository": {
+		"type": "git",
+		"url": " https://skinny08910@bitbucket.org/nexgendev/fitness-club.git, https://github.com/skinny08910/fitness-club.git"
+	},
+	"keywords": [
+		"Fitness",
+		"Health",
+		"Weights",
+		"Gym",
+		"Sports",
+		"Workout"
+	],
+	"author": "Nicksonder Examar",
+	"license": "ISC",
+	"devDependencies": {
+		"node-sass": "^5.0.0"
+	}
+}
