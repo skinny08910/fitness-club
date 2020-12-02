@@ -12,6 +12,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
   font-size  : 0.9rem;
+  font-weight: 500;
   color      : $dark-color;
 }
 
@@ -22,6 +23,13 @@ a {
 
 li {
   list-style: none;
+}
+
+source {
+  width     : 100%;
+  max-width : 100%;
+  height    : 100%;
+  object-fit: cover;
 }
 
 img {
@@ -37,18 +45,18 @@ img {
   margin   : 0 auto;
 }
 
-.row {
-  display        : flex;
-  align-items    : center;
-  justify-content: space-between;
-}
-
 .center {
   width    : inherit;
   position : absolute;
   top      : 50%;
   left     : 50%;
   transform: translate(-50%, -50%);
+}
+
+.row {
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
 }
 // Header Styles
 
@@ -98,7 +106,7 @@ img {
 
         .signup-btn {
           color        : $dark-color;
-          padding      : 0.5em 1em;
+          padding      : 0.7em 1.2em;
           border-radius: 5px;
           background   : $green-color;
           transition   : all 0.3s ease-in-out;
@@ -144,7 +152,7 @@ img {
       color        : $dark-color;
       background   : $green-color;
       border-radius: 5px;
-      padding      : 0.7em 0.9em;
+      padding      : 0.7em 1.2em;
       transition   : all 0.3s ease-out;
 
       &:hover {
@@ -155,9 +163,11 @@ img {
   }
   // Jumbo Video
   .placeholder-video {
-    width: 60%;
-    // Vidoe Placeholder
+    display: flex;
+    width  : 60%;
+    // Video Placeholder
     .video-pl-container {
+      background-image       : url("../../img/jumbo-img.jpg"); // Fallback
       background-image       : linear-gradient(to bottom right, rgba($charcoal, .6) 100%, rgba($charcoal, .4) 100%), url("../../img/promo-video-poster.png");
       background-repeat      : no-repeat;
       -webkit-background-size: cover;
@@ -165,8 +175,9 @@ img {
       -o-background-size     : cover;
       background-size        : cover;
       border-radius          : 5px;
-      width                  : 45em;
-      height                 : 25em;
+      // width                  : 45em;
+      width                  : 100%;
+      height                 : 30em;
       position               : relative;
 
       .play-btn-container {
@@ -225,25 +236,32 @@ img {
           border                           : 5px solid $green-color;
           top                              : -25%;
           left                             : -25%;
-          background                       : rgba(198, 16, 0, 0);
+          background                       : rgba($green-color, .5);
         }
       }
     }
   }
 
   .jumbo-text + .placeholder-video {
-    margin-left: 3em;
+    margin-left: 5em;
   }
   // Video Box
   .video-box {
-    display : none;
-    width   : 100%;
-    height  : 100%;
-    position: relative;
+    width     : 100%;
+    height    : 100%;
+    position  : relative;
+    visibility: hidden;
+    opacity   : 0;
+    transition: all 0.3s ease-out;
+
+    &.active {
+      visibility: visible;
+      opacity   : 1;
+    }
 
     .exit-box {
       position     : fixed;
-      top          : 10%;
+      top          : 5%;
       right        : 10%;
       color        : #fff;
       font-size    : 2.5rem;
@@ -253,8 +271,8 @@ img {
     }
 
     .video-player {
-      width        : 60%;
-      height       : 60%;
+      width        : 70%;
+      height       : 70%;
       position     : fixed;
       top          : 50%;
       left         : 50%;
@@ -274,6 +292,156 @@ img {
       left      : 50%;
       transform : translate(-50%, -50%);
       background: linear-gradient(to bottom right, rgba($charcoal, .8) 100%, rgba($charcoal, .8) 100%);
+    }
+  }
+}
+// About Styles
+
+#about-section {
+  padding   : 10em 0;
+  background: $charcoal;
+
+  .about-img {
+    background-image       : url("../../img/about-img.jpg"); // Fallback
+    background-image       : linear-gradient(to bottom right, rgba($charcoal, .3) 100%, rgba($charcoal, .3) 100%), url("../../img/about-img.jpg");
+    background-repeat      : no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size   : cover;
+    -o-background-size     : cover;
+    background-size        : cover;
+    border-radius          : 5px;
+    width                  : 60%;
+    height                 : 30em;
+  }
+
+  .about-description {
+    width: 40%;
+    color: #fff;
+
+    .about-title {
+      font-size    : 3.5rem;
+      color        : $green-color;
+      margin-bottom: 0.4em;
+    }
+
+    .about-description-p {
+      line-height: 1.5rem;
+    }
+  }
+
+  .about-img + .about-description {
+    margin-left: 5em;
+  }
+}
+// Team Styles
+
+#our-team {
+  padding                : 10em 0;
+  background             : $charcoal; // Fallback
+  background-image       : url("../../img/team-bg-img.jpg"); // Fallback
+  background-image       : linear-gradient(to bottom right, rgba($charcoal, .7) 100%, rgba($charcoal, .7) 100%), url("../../img/team-bg-img.jpg");
+  background-repeat      : no-repeat;
+  background-position    : center center;
+  -webkit-background-size: cover;
+  -moz-background-size   : cover;
+  -o-background-size     : cover;
+  background-size        : cover;
+
+  .team-main-title {
+    text-align   : center;
+    color        : $green-color;
+    font-size    : 3.5rem;
+    margin-bottom: 2em;
+  }
+
+  .box {
+    .box-description {
+      width      : 40%;
+      color      : #fff;
+      line-height: 1.5rem;
+
+      .name {
+        font-size    : 2.3rem;
+        color        : $green-color;
+        margin-bottom: 1.5rem;
+      }
+
+      .team-description-p {
+        margin-bottom: 1rem;
+      }
+
+      .experience {
+        display        : flex;
+        justify-content: space-between;
+
+        .years-of-experience {
+          width: 40%;
+        }
+
+        .awards {
+          width: 40%;
+        }
+      }
+    }
+
+    .box-description + .box-img {
+      margin-left: 5em;
+    }
+  }
+
+  .box-1 {
+    margin-bottom: 15em;
+
+    .box-img {
+      background-image       : url("../../img/trainer-1.jpg"); // Fallback
+      background-image       : linear-gradient(to bottom right, rgba($charcoal, .3) 100%, rgba($charcoal, .3) 100%), url("../../img/trainer-1.jpg");
+      background-repeat      : no-repeat;
+      background-position    : center center;
+      -webkit-background-size: cover;
+      -moz-background-size   : cover;
+      -o-background-size     : cover;
+      background-size        : cover;
+      border-radius          : 5px;
+      width                  : 50%;
+      height                 : 57em;
+    }
+  }
+
+  .box-2 {
+    margin-bottom: 15em;
+
+    .box-img {
+      background-image       : url("../../img/trainer-2.jpg"); // Fallback
+      background-image       : linear-gradient(to bottom right, rgba($charcoal, .3) 100%, rgba($charcoal, .3) 100%), url("../../img/trainer-2.jpg");
+      background-repeat      : no-repeat;
+      background-position    : center center;
+      -webkit-background-size: cover;
+      -moz-background-size   : cover;
+      -o-background-size     : cover;
+      background-size        : cover;
+      border-radius          : 5px;
+      width                  : 50%;
+      height                 : 57em;
+    }
+
+    .box-img + .box-description {
+      margin-left: 5em;
+    }
+  }
+
+  .box-3 {
+    .box-img {
+      background-image       : url("../../img/trainer-3.jpg"); // Fallback
+      background-image       : linear-gradient(to bottom right, rgba($charcoal, .3) 100%, rgba($charcoal, .3) 100%), url("../../img/trainer-3.jpg");
+      background-repeat      : no-repeat;
+      background-position    : top center;
+      -webkit-background-size: cover;
+      -moz-background-size   : cover;
+      -o-background-size     : cover;
+      background-size        : cover;
+      border-radius          : 5px;
+      width                  : 50%;
+      height                 : 57em;
     }
   }
 }
