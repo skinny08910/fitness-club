@@ -46,6 +46,7 @@
     opacity: 0;
     box-shadow: none; } }
 
+/* General Styles ***********************/
 *,
 *::after,
 *::before {
@@ -80,7 +81,7 @@ img {
 
 .container {
   width: 70%;
-  max-width: 1500px;
+  max-width: 1400px;
   margin: 0 auto; }
 
 .center {
@@ -95,6 +96,7 @@ img {
   align-items: center;
   justify-content: space-between; }
 
+/* Header Styles ***********************/
 #header-section {
   background: transparent; }
   #header-section .nav-bar {
@@ -133,6 +135,7 @@ img {
         #header-section .nav-bar .link-container .nav-btns .signin-btn + .signup-btn {
           margin-left: 1em; }
 
+/* Jumbo Styles ***********************/
 #jumbo-section {
   height: 105vh;
   background: #2F4858;
@@ -235,21 +238,7 @@ img {
     width: 100%;
     height: 100%;
     position: relative;
-    visibility: hidden;
-    opacity: 0;
     transition: all 0.3s ease-out; }
-    #jumbo-section .video-box.active {
-      visibility: visible;
-      opacity: 1; }
-    #jumbo-section .video-box .exit-box {
-      position: fixed;
-      top: 5%;
-      right: 10%;
-      color: #fff;
-      font-size: 2.5rem;
-      margin-bottom: 1em;
-      cursor: pointer;
-      z-index: 100; }
     #jumbo-section .video-box .video-player {
       width: 70%;
       height: 70%;
@@ -270,7 +259,17 @@ img {
       left: 50%;
       transform: translate(-50%, -50%);
       background: linear-gradient(to bottom right, rgba(47, 72, 88, 0.8) 100%, rgba(47, 72, 88, 0.8) 100%); }
+  #jumbo-section .exit-box {
+    position: fixed;
+    top: 5%;
+    right: 10%;
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 1em;
+    cursor: pointer;
+    z-index: 100; }
 
+/* About Styles ***********************/
 #about-section {
   padding: 10em 0;
   background: #2F4858; }
@@ -297,7 +296,8 @@ img {
   #about-section .about-img + .about-description {
     margin-left: 5em; }
 
-#our-team {
+/* Team Styles ***********************/
+#our-team-section {
   padding: 10em 0;
   background: #2F4858;
   background-image: url("../../img/team-bg-img.jpg");
@@ -308,33 +308,33 @@ img {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
-  #our-team .team-main-title {
+  #our-team-section .team-main-title {
     text-align: center;
     color: #00FF00;
     font-size: 3.5rem;
     margin-bottom: 2em; }
-  #our-team .box .box-description {
+  #our-team-section .box .box-description {
     width: 40%;
     color: #fff;
     line-height: 1.5rem; }
-    #our-team .box .box-description .name {
+    #our-team-section .box .box-description .name {
       font-size: 2.3rem;
       color: #00FF00;
       margin-bottom: 1.5rem; }
-    #our-team .box .box-description .team-description-p {
+    #our-team-section .box .box-description .team-description-p {
       margin-bottom: 1rem; }
-    #our-team .box .box-description .experience {
+    #our-team-section .box .box-description .experience {
       display: flex;
       justify-content: space-between; }
-      #our-team .box .box-description .experience .years-of-experience {
+      #our-team-section .box .box-description .experience .years-of-experience {
         width: 40%; }
-      #our-team .box .box-description .experience .awards {
+      #our-team-section .box .box-description .experience .awards {
         width: 40%; }
-  #our-team .box .box-description + .box-img {
+  #our-team-section .box .box-description + .box-img {
     margin-left: 5em; }
-  #our-team .box-1 {
+  #our-team-section .box-1 {
     margin-bottom: 15em; }
-    #our-team .box-1 .box-img {
+    #our-team-section .box-1 .box-img {
       background-image: url("../../img/trainer-1.jpg");
       background-image: linear-gradient(to bottom right, rgba(47, 72, 88, 0.3) 100%, rgba(47, 72, 88, 0.3) 100%), url("../../img/trainer-1.jpg");
       background-repeat: no-repeat;
@@ -346,9 +346,9 @@ img {
       border-radius: 5px;
       width: 50%;
       height: 57em; }
-  #our-team .box-2 {
+  #our-team-section .box-2 {
     margin-bottom: 15em; }
-    #our-team .box-2 .box-img {
+    #our-team-section .box-2 .box-img {
       background-image: url("../../img/trainer-2.jpg");
       background-image: linear-gradient(to bottom right, rgba(47, 72, 88, 0.3) 100%, rgba(47, 72, 88, 0.3) 100%), url("../../img/trainer-2.jpg");
       background-repeat: no-repeat;
@@ -360,9 +360,9 @@ img {
       border-radius: 5px;
       width: 50%;
       height: 57em; }
-    #our-team .box-2 .box-img + .box-description {
+    #our-team-section .box-2 .box-img + .box-description {
       margin-left: 5em; }
-  #our-team .box-3 .box-img {
+  #our-team-section .box-3 .box-img {
     background-image: url("../../img/trainer-3.jpg");
     background-image: linear-gradient(to bottom right, rgba(47, 72, 88, 0.3) 100%, rgba(47, 72, 88, 0.3) 100%), url("../../img/trainer-3.jpg");
     background-repeat: no-repeat;
@@ -374,3 +374,213 @@ img {
     border-radius: 5px;
     width: 50%;
     height: 57em; }
+
+/* Review Styles ***********************/
+#review-section {
+  padding: 10em 0;
+  background: #2F4858; }
+  #review-section .review-big-title {
+    text-align: center;
+    font-size: 3.5rem;
+    color: #00FF00;
+    margin-bottom: 2em; }
+  #review-section .review-text {
+    width: 55%; }
+    #review-section .review-text .review-title {
+      font-size: 2.3rem;
+      font-weight: 600;
+      line-height: 3.5rem;
+      color: #fff; }
+    #review-section .review-text .slider-btn-container {
+      margin-top: 1.5em; }
+      #review-section .review-text .slider-btn-container .slider-btn-left {
+        display: inline-block;
+        font-size: 1.5rem;
+        text-align: center;
+        vertical-align: middle;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        fill: #2F4858;
+        background: #00FF00;
+        cursor: pointer; }
+        #review-section .review-text .slider-btn-container .slider-btn-left .icon {
+          width: 50%;
+          height: 100%; }
+      #review-section .review-text .slider-btn-container .slider-btn-right {
+        display: inline-block;
+        font-size: 1.5rem;
+        text-align: center;
+        vertical-align: middle;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        fill: #2F4858;
+        background: #00FF00;
+        margin-left: 0.4em;
+        cursor: pointer; }
+        #review-section .review-text .slider-btn-container .slider-btn-right .icon {
+          width: 50%;
+          height: 100%; }
+  #review-section .review-grid {
+    color: #fff;
+    width: 40%; }
+    #review-section .review-grid .slider-container {
+      width: 100%;
+      height: 300px;
+      position: relative; }
+      #review-section .review-grid .slider-container .box {
+        display: inline-block;
+        width: 100%;
+        background: #00FF00;
+        padding: 1.5em;
+        border-radius: 5px;
+        transition: all 0.5s ease-in-out; }
+        #review-section .review-grid .slider-container .box .review-description-container {
+          position: relative; }
+          #review-section .review-grid .slider-container .box .review-description-container .review-description {
+            font-style: italic;
+            line-height: 1.5rem;
+            color: #2F4858;
+            margin-top: 2rem;
+            position: sticky;
+            z-index: 10; }
+        #review-section .review-grid .slider-container .box .reviewer-img {
+          width: 100px;
+          height: 100px;
+          margin: 2em auto; }
+          #review-section .review-grid .slider-container .box .reviewer-img img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%; }
+        #review-section .review-grid .slider-container .box .reviewer-name {
+          font-weight: 500;
+          color: #2F4858;
+          text-align: center;
+          margin-bottom: 1em; }
+      #review-section .review-grid .slider-container .box-1 {
+        position: absolute;
+        z-index: 30; }
+        #review-section .review-grid .slider-container .box-1 .quote-left {
+          width: 45px;
+          height: 45px;
+          position: absolute;
+          top: -45%;
+          left: -2%; }
+          #review-section .review-grid .slider-container .box-1 .quote-left .icon {
+            width: 100%;
+            height: 100%;
+            fill: #fff; }
+        #review-section .review-grid .slider-container .box-1 .quote-right {
+          width: 45px;
+          height: 45px;
+          position: absolute;
+          bottom: -30%;
+          right: 24%; }
+          #review-section .review-grid .slider-container .box-1 .quote-right .icon {
+            width: 100%;
+            height: 100%;
+            fill: #fff; }
+      #review-section .review-grid .slider-container .box-2 {
+        position: absolute;
+        z-index: 20; }
+        #review-section .review-grid .slider-container .box-2 .quote-left {
+          width: 45px;
+          height: 45px;
+          position: absolute;
+          top: -30%;
+          left: -2%; }
+          #review-section .review-grid .slider-container .box-2 .quote-left .icon {
+            width: 100%;
+            height: 100%;
+            fill: #fff; }
+        #review-section .review-grid .slider-container .box-2 .quote-right {
+          width: 45px;
+          height: 45px;
+          position: absolute;
+          bottom: -28%;
+          right: 2%; }
+          #review-section .review-grid .slider-container .box-2 .quote-right .icon {
+            width: 100%;
+            height: 100%;
+            fill: #fff; }
+      #review-section .review-grid .slider-container .box-3 {
+        position: absolute;
+        z-index: 10; }
+        #review-section .review-grid .slider-container .box-3 .quote-left {
+          width: 45px;
+          height: 45px;
+          position: absolute;
+          top: -45%;
+          left: -2%; }
+          #review-section .review-grid .slider-container .box-3 .quote-left .icon {
+            width: 100%;
+            height: 100%;
+            fill: #fff; }
+        #review-section .review-grid .slider-container .box-3 .quote-right {
+          width: 45px;
+          height: 45px;
+          position: absolute;
+          bottom: -36%;
+          right: 19%; }
+          #review-section .review-grid .slider-container .box-3 .quote-right .icon {
+            width: 100%;
+            height: 100%;
+            fill: #fff; }
+      #review-section .review-grid .slider-container .box-4 {
+        position: absolute;
+        z-index: 0; }
+        #review-section .review-grid .slider-container .box-4 .quote-left {
+          width: 45px;
+          height: 45px;
+          position: absolute;
+          top: -45%;
+          left: -2%; }
+          #review-section .review-grid .slider-container .box-4 .quote-left .icon {
+            width: 100%;
+            height: 100%;
+            fill: #fff; }
+        #review-section .review-grid .slider-container .box-4 .quote-right {
+          width: 45px;
+          height: 45px;
+          position: absolute;
+          bottom: -36%;
+          right: 44%; }
+          #review-section .review-grid .slider-container .box-4 .quote-right .icon {
+            width: 100%;
+            height: 100%;
+            fill: #fff; }
+    #review-section .review-grid .slider-btn-container {
+      display: none;
+      margin-top: 1.5em; }
+      #review-section .review-grid .slider-btn-container .slider-btn-left {
+        display: inline-block;
+        font-size: 1.5rem;
+        text-align: center;
+        vertical-align: middle;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        fill: #2F4858;
+        background: #00FF00;
+        cursor: pointer; }
+        #review-section .review-grid .slider-btn-container .slider-btn-left .icon {
+          width: 50%;
+          height: 100%; }
+      #review-section .review-grid .slider-btn-container .slider-btn-right {
+        display: inline-block;
+        font-size: 1.5rem;
+        text-align: center;
+        vertical-align: middle;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        fill: #2F4858;
+        background: #00FF00;
+        margin-left: 0.4em;
+        cursor: pointer; }
+        #review-section .review-grid .slider-btn-container .slider-btn-right .icon {
+          width: 50%;
+          height: 100%; }
+  #review-section .reviewer-text + .review-grid {
+    margin-left: 5em; }

@@ -1,6 +1,6 @@
 @import "variables";
-@import "animation"; // General Styles
-
+@import "animation";
+/* General Styles ***********************/
 *,
 *::after,
 *::before {
@@ -41,7 +41,7 @@ img {
 
 .container {
   width    : 70%;
-  max-width: 1500px;
+  max-width: 1400px;
   margin   : 0 auto;
 }
 
@@ -58,8 +58,7 @@ img {
   align-items    : center;
   justify-content: space-between;
 }
-// Header Styles
-
+/* Header Styles ***********************/
 #header-section {
   background: transparent;
 
@@ -124,8 +123,7 @@ img {
     }
   }
 }
-// Jumbo Styles
-
+/* Jumbo Styles ***********************/
 #jumbo-section {
   height                 : 105vh;
   background             : $charcoal; // Fallback
@@ -250,25 +248,7 @@ img {
     width     : 100%;
     height    : 100%;
     position  : relative;
-    visibility: hidden;
-    opacity   : 0;
     transition: all 0.3s ease-out;
-
-    &.active {
-      visibility: visible;
-      opacity   : 1;
-    }
-
-    .exit-box {
-      position     : fixed;
-      top          : 5%;
-      right        : 10%;
-      color        : #fff;
-      font-size    : 2.5rem;
-      margin-bottom: 1em;
-      cursor       : pointer;
-      z-index      : 100;
-    }
 
     .video-player {
       width        : 70%;
@@ -294,9 +274,19 @@ img {
       background: linear-gradient(to bottom right, rgba($charcoal, .8) 100%, rgba($charcoal, .8) 100%);
     }
   }
+  // Exit Box
+  .exit-box {
+    position     : fixed;
+    top          : 5%;
+    right        : 10%;
+    color        : #fff;
+    font-size    : 2.5rem;
+    margin-bottom: 1em;
+    cursor       : pointer;
+    z-index      : 100;
+  }
 }
-// About Styles
-
+/* About Styles ***********************/
 #about-section {
   padding   : 10em 0;
   background: $charcoal;
@@ -333,9 +323,8 @@ img {
     margin-left: 5em;
   }
 }
-// Team Styles
-
-#our-team {
+/* Team Styles ***********************/
+#our-team-section {
   padding                : 10em 0;
   background             : $charcoal; // Fallback
   background-image       : url("../../img/team-bg-img.jpg"); // Fallback
@@ -443,5 +432,299 @@ img {
       width                  : 50%;
       height                 : 57em;
     }
+  }
+}
+/* Review Styles ***********************/
+#review-section {
+  padding   : 10em 0;
+  background: $charcoal;
+
+  .review-big-title {
+    text-align   : center;
+    font-size    : 3.5rem;
+    color        : $green-color;
+    margin-bottom: 2em;
+  }
+  // Review Text
+  .review-text {
+    width: 55%;
+
+    .review-title {
+      font-size  : 2.3rem;
+      font-weight: 600;
+      line-height: 3.5rem;
+      color      : #fff;
+    }
+    // Slider Container
+    .slider-btn-container {
+      margin-top: 1.5em;
+
+      .slider-btn-left {
+        display       : inline-block;
+        font-size     : 1.5rem;
+        text-align    : center;
+        vertical-align: middle;
+        width         : 40px;
+        height        : 40px;
+        border-radius : 50%;
+        fill          : $charcoal;
+        background    : $green-color;
+        cursor        : pointer;
+
+        .icon {
+          width : 50%;
+          height: 100%;
+        }
+      }
+
+      .slider-btn-right {
+        display       : inline-block;
+        font-size     : 1.5rem;
+        text-align    : center;
+        vertical-align: middle;
+        width         : 40px;
+        height        : 40px;
+        border-radius : 50%;
+        fill          : $charcoal;
+        background    : $green-color;
+        margin-left   : 0.4em;
+        cursor        : pointer;
+
+        .icon {
+          width : 50%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  // Revew Grid
+  .review-grid {
+    color: #fff;
+    width: 40%;
+
+    .slider-container {
+      width   : 100%;
+      height  : 300px;
+      position: relative;
+      // Global Boxes
+      .box {
+        display      : inline-block;
+        width        : 100%;
+        background   : $green-color;
+        padding      : 1.5em;
+        border-radius: 5px;
+        transition   : all 0.5s ease-in-out;
+
+        .review-description-container {
+          position: relative;
+
+          .review-description {
+            font-style : italic;
+            line-height: 1.5rem;
+            color      : $charcoal;
+            margin-top : 2rem;
+            position   : sticky;
+            z-index    : 10;
+          }
+        }
+
+        .reviewer-img {
+          width : 100px;
+          height: 100px;
+          margin: 2em auto;
+
+          img {
+            width        : 100%;
+            height       : 100%;
+            border-radius: 50%;
+          }
+        }
+
+        .reviewer-name {
+          font-weight  : 500;
+          color        : $charcoal;
+          text-align   : center;
+          margin-bottom: 1em;
+        }
+      }
+      // Individual boxes
+      .box-1 {
+        position: absolute;
+        z-index : 30;
+
+        .quote-left {
+          width   : 45px;
+          height  : 45px;
+          position: absolute;
+          top     : -45%;
+          left    : -2%;
+
+          .icon {
+            width : 100%;
+            height: 100%;
+            fill  : #fff;
+          }
+        }
+
+        .quote-right {
+          width   : 45px;
+          height  : 45px;
+          position: absolute;
+          bottom  : -30%;
+          right   : 24%;
+
+          .icon {
+            width : 100%;
+            height: 100%;
+            fill  : #fff;
+          }
+        }
+      }
+
+      .box-2 {
+        position: absolute;
+        z-index : 20;
+
+        .quote-left {
+          width   : 45px;
+          height  : 45px;
+          position: absolute;
+          top     : -30%;
+          left    : -2%;
+
+          .icon {
+            width : 100%;
+            height: 100%;
+            fill  : #fff;
+          }
+        }
+
+        .quote-right {
+          width   : 45px;
+          height  : 45px;
+          position: absolute;
+          bottom  : -28%;
+          right   : 2%;
+
+          .icon {
+            width : 100%;
+            height: 100%;
+            fill  : #fff;
+          }
+        }
+      }
+
+      .box-3 {
+        position: absolute;
+        z-index : 10;
+
+        .quote-left {
+          width   : 45px;
+          height  : 45px;
+          position: absolute;
+          top     : -45%;
+          left    : -2%;
+
+          .icon {
+            width : 100%;
+            height: 100%;
+            fill  : #fff;
+          }
+        }
+
+        .quote-right {
+          width   : 45px;
+          height  : 45px;
+          position: absolute;
+          bottom  : -36%;
+          right   : 19%;
+
+          .icon {
+            width : 100%;
+            height: 100%;
+            fill  : #fff;
+          }
+        }
+      }
+
+      .box-4 {
+        position: absolute;
+        z-index : 0;
+
+        .quote-left {
+          width   : 45px;
+          height  : 45px;
+          position: absolute;
+          top     : -45%;
+          left    : -2%;
+
+          .icon {
+            width : 100%;
+            height: 100%;
+            fill  : #fff;
+          }
+        }
+
+        .quote-right {
+          width   : 45px;
+          height  : 45px;
+          position: absolute;
+          bottom  : -36%;
+          right   : 44%;
+
+          .icon {
+            width : 100%;
+            height: 100%;
+            fill  : #fff;
+          }
+        }
+      }
+    }
+    // Slider Container
+    .slider-btn-container {
+      display   : none;
+      margin-top: 1.5em;
+
+      .slider-btn-left {
+        display       : inline-block;
+        font-size     : 1.5rem;
+        text-align    : center;
+        vertical-align: middle;
+        width         : 40px;
+        height        : 40px;
+        border-radius : 50%;
+        fill          : $charcoal;
+        background    : $green-color;
+        cursor        : pointer;
+
+        .icon {
+          width : 50%;
+          height: 100%;
+        }
+      }
+
+      .slider-btn-right {
+        display       : inline-block;
+        font-size     : 1.5rem;
+        text-align    : center;
+        vertical-align: middle;
+        width         : 40px;
+        height        : 40px;
+        border-radius : 50%;
+        fill          : $charcoal;
+        background    : $green-color;
+        margin-left   : 0.4em;
+        cursor        : pointer;
+
+        .icon {
+          width : 50%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .reviewer-text + .review-grid {
+    margin-left: 5em;
   }
 }
