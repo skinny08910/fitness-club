@@ -3,12 +3,16 @@
 	"version": "1.0.0",
 	"description": "A Fitness Company.",
 	"main": "main.js",
+	"browserslist": [
+		"last 4 versions"
+	],
 	"scripts": {
-		"compile-sass": "node-sass css/sass/style.scss css/style.css -w"
+		"compile:sass": "node-sass css/sass/style.scss css/main.css -w",
+		"prefix:css": "postcss --use autoprefixer -b 'last 4 versions' css/style.css -o css/style.prefix.css"
 	},
 	"repository": {
 		"type": "git",
-		"url": " https://skinny08910@bitbucket.org/nexgendev/fitness-club.git, https://github.com/skinny08910/fitness-club.git"
+		"url": " https://bitbucket.org/nexgendev/fitness-club.git, https://github.com/skinny08910/fitness-club.git"
 	},
 	"keywords": [
 		"Fitness",
@@ -21,6 +25,9 @@
 	"author": "Nicksonder Examar",
 	"license": "ISC",
 	"devDependencies": {
-		"node-sass": "^5.0.0"
-	}
+		"autoprefixer": "^10.1.0",
+		"node-sass": "^5.0.0",
+		"postcss-cli": "^8.3.1"
+	},
+	"dependencies": {}
 }

@@ -266,12 +266,13 @@ img {
 
     .video-box-gradient {
       width     : 100%;
-      height    : 100%;
-      position  : absolute;
+      height    : 100vh;
+      position  : fixed;
       top       : 50%;
       left      : 50%;
       transform : translate(-50%, -50%);
       background: linear-gradient(to bottom right, rgba($charcoal, .8) 100%, rgba($charcoal, .8) 100%);
+      z-index   : 50;
     }
   }
   // Exit Box
@@ -726,5 +727,301 @@ img {
 
   .reviewer-text + .review-grid {
     margin-left: 5em;
+  }
+}
+/* Plan Styles ***********************/
+#plan-section {
+  padding                : 10em 0; // Fallback
+  background             : $charcoal;
+  background-image       : linear-gradient(to bottom right, rgba($charcoal, .7) 100%, rgba($charcoal, .7) 100%), url("../../img/plan-bg-img.jpg");
+  background-repeat      : no-repeat;
+  background-position    : center center;
+  -webkit-background-size: cover;
+  -moz-background-size   : cover;
+  -o-background-size     : cover;
+  background-size        : cover;
+  border-radius          : 5px;
+
+  .plan-big-title {
+    text-align   : center;
+    color        : $green-color;
+    font-size    : 3.5rem;
+    margin-bottom: 2em;
+  }
+
+  .plan-grid-container {
+    display              : grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap             : 5em;
+    // Global Box
+    .box {
+      color        : #fff;
+      padding      : 2em;
+      border-radius: 5px;
+
+      .plan-title {
+        font-size    : 1.2rem;
+        margin-bottom: 0.6em;
+      }
+
+      .price {
+        font-size    : 1.9rem;
+        font-weight  : 500;
+        margin-bottom: 0.6em;
+      }
+
+      .features-list {
+        margin-bottom: 2em;
+
+        .list:not(:last-child) {
+          margin-bottom: 1em;
+        }
+      }
+    }
+    // Individual Boxes
+    .box-1 {
+      color     : $charcoal;
+      background: #fff;
+
+      .join-btn {
+        color        : #fff;
+        padding      : 0.7em 1.2em;
+        border-radius: 5px;
+        background   : $charcoal;
+        margin-top   : 6em;
+      }
+    }
+
+    .box-2 {
+      color     : $charcoal;
+      background: $green-color;
+
+      .join-btn {
+        color        : #fff;
+        padding      : 0.7em 1.2em;
+        border-radius: 5px;
+        background   : $charcoal;
+        margin-top   : 1.9em;
+      }
+    }
+
+    .box-3 {
+      color     : $charcoal;
+      background: #fff;
+
+      .join-btn {
+        color        : #fff;
+        padding      : 0.7em 1.2em;
+        border-radius: 5px;
+        background   : $charcoal;
+        margin-top   : 2em;
+      }
+    }
+  }
+}
+/* Contact Styles ***********************/
+#contact-section {
+  padding   : 10em 0;
+  background: $charcoal;
+
+  .contact-big-title {
+    text-align   : center;
+    color        : $green-color;
+    font-size    : 3.5rem;
+    margin-bottom: 2em;
+  }
+
+  .contact-form {
+    width  : 60%;
+    padding: 2em;
+    margin : 0 auto;
+
+    label {
+      color      : $green-color;
+      line-height: 2rem;
+    }
+
+    input {
+      font-family: 'Montserrat', sans-serif;
+      font-size  : 0.9rem;
+      font-weight: 500;
+      color      : $dark-color;
+      border     : 0;
+      outline    : none;
+
+      &::-moz-focus-inner {
+        border : 0;
+        outline: none;
+      }
+    }
+
+    .input-container {
+      height       : 2.5em;
+      background   : #fff;
+      border-radius: 5px;
+
+      &:hover {
+        border: 1px solid $green-color;
+      }
+
+      input {
+        width      : 95%;
+        height     : 100%;
+        margin-left: 1em;
+
+        &::-moz-focus-inner {
+          border : 0;
+          outline: none;
+        }
+      }
+    }
+
+    .first-last-container {
+      margin-bottom: 1em;
+
+      .first-name-container {
+        width: 50%;
+      }
+
+      .last-name-container {
+        width: 50%;
+      }
+
+      .first-name-container + .last-name-container {
+        margin-left: 5em;
+      }
+    }
+
+    .email-container {
+      height       : 2.5em;
+      width        : 100%;
+      margin-bottom: 1em;
+      background   : #fff;
+      border-radius: 5px;
+
+      input {
+        width      : 98%;
+        height     : 100%;
+        margin-left: 1em;
+
+        &::-moz-focus-inner {
+          border : 0;
+          outline: none;
+        }
+      }
+    }
+
+    .message-container {
+      height       : 15em;
+      width        : 100%;
+      margin-bottom: 1em;
+      background   : #fff;
+      border-radius: 5px;
+
+      textarea {
+        font-family: 'Montserrat', sans-serif;
+        font-size  : 0.9rem;
+        font-weight: 500;
+        color      : $dark-color;
+        width      : 98%;
+        height     : 92%;
+        margin     : 1.2em 0 0 1em;
+        resize     : none;
+        border     : 0;
+        outline    : none;
+
+        &::-moz-focus-inner {
+          border : 0;
+          outline: none;
+        }
+      }
+    }
+
+    .submit-btn {
+      font-family  : 'Montserrat', sans-serif;
+      font-size    : 0.9rem;
+      font-weight  : 500;
+      color        : $dark-color;
+      padding      : 0.7em 1.2em;
+      border       : 0;
+      outline      : none;
+      border-radius: 5px;
+      cursor       : pointer;
+      background   : #fff;
+      transition   : all 0.3s ease-in-out;
+
+      &:hover {
+        color     : $charcoal;
+        background: $green-color;
+      }
+    }
+  }
+}
+/* Footer Styles ***********************/
+#footer-section {
+  padding   : 5em 0 3em;
+  background: $green-color;
+
+  .footer-container {
+    width    : 60%;
+    max-width: 1400px;
+    margin   : 0 auto;
+
+    .footer-grid {
+      display              : grid;
+      grid-template-columns: repeat(3, 2fr);
+      // Global Box
+      .box {
+        margin-bottom: 3em;
+
+        .footer-title {
+          margin-bottom: 1em;
+        }
+
+        .footer-list-container {
+          .footer-list a {
+            transition: border-bottom 0.3s ease-in-out;
+
+            &:hover {
+              border-bottom: 1px solid $charcoal;
+            }
+          }
+
+          .footer-list:not(:last-child) {
+            margin-bottom: 1em;
+          }
+        }
+      }
+
+      .box + .box {
+        margin-left: 5em;
+      }
+      // Box-2
+      .box-2 {
+        .footer-title {
+          text-align: center;
+        }
+
+        .footer-row {
+          display        : flex;
+          justify-content: center;
+        }
+      }
+      // Box-3
+      .box-3 {
+        .footer-title {
+          text-align: right;
+        }
+
+        .footer-row {
+          display        : flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+
+    .copyright {
+      text-align: center;
+    }
   }
 }
