@@ -666,26 +666,21 @@ img {
     #contact-section .contact-form label {
       color: #00FF00;
       line-height: 2rem; }
-    #contact-section .contact-form input {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: #0f0f0f;
-      border: 0;
-      outline: none; }
-      #contact-section .contact-form input::-moz-focus-inner {
-        border: 0;
-        outline: none; }
     #contact-section .contact-form .input-container {
       height: 2.5em;
       background: #fff;
-      border-radius: 5px; }
+      border-radius: 5px;
+      border: 1px solid rgba(0, 255, 0, 0);
+      transition: border 0.3s ease-in-out; }
       #contact-section .contact-form .input-container:hover {
-        border: 1px solid #00FF00; }
+        border: 1px solid lime; }
       #contact-section .contact-form .input-container input {
+        font-size: 0.9rem;
         width: 95%;
         height: 100%;
-        margin-left: 1em; }
+        margin-left: 1em;
+        outline: none;
+        border: 0; }
         #contact-section .contact-form .input-container input::-moz-focus-inner {
           border: 0;
           outline: none; }
@@ -706,7 +701,9 @@ img {
       #contact-section .contact-form .email-container input {
         width: 98%;
         height: 100%;
-        margin-left: 1em; }
+        margin-left: 1em;
+        outline: none;
+        border: 0; }
         #contact-section .contact-form .email-container input::-moz-focus-inner {
           border: 0;
           outline: none; }
@@ -781,3 +778,144 @@ img {
         justify-content: flex-end; }
     #footer-section .footer-container .copyright {
       text-align: center; }
+
+/* Log and Signup Styles ***********************/
+#login-signup-section {
+  height: 105vh;
+  background: #2F4858;
+  background-image: url("../../img/signup-bg-img.jpg");
+  background-image: linear-gradient(to bottom right, rgba(47, 72, 88, 0.5) 100%, rgba(47, 72, 88, 0.5) 100%), url("../../img/signup-bg-img.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-top: -6em; }
+  #login-signup-section .login-signup-row {
+    width: 80%;
+    height: 40em;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 5px; }
+    #login-signup-section .login-signup-row .login-and-sigup-btn {
+      color: #0f0f0f;
+      position: absolute;
+      top: -3%;
+      left: 50%;
+      transform: translate(-46%, 0);
+      z-index: 100; }
+      #login-signup-section .login-signup-row .login-and-sigup-btn .toggle-login {
+        padding: 0.5em 0.4em 0.5em 1em;
+        border-right: 1px solid #fff;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        background: rgba(0, 255, 0, 0.8);
+        cursor: pointer;
+        transition: background 0.3s ease-in-out; }
+        #login-signup-section .login-signup-row .login-and-sigup-btn .toggle-login:hover {
+          background: rgba(0, 255, 0, 0.9); }
+      #login-signup-section .login-signup-row .login-and-sigup-btn .toggle-signup {
+        padding: 0.5em 1em 0.5em 0.4em;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        background: rgba(0, 255, 0, 0.8);
+        cursor: pointer;
+        transition: background 0.3s ease-in-out; }
+        #login-signup-section .login-signup-row .login-and-sigup-btn .toggle-signup:hover {
+          background: rgba(0, 255, 0, 0.9); }
+    #login-signup-section .login-signup-row .login {
+      width: 50%;
+      height: inherit;
+      background: rgba(0, 255, 0, 0.6);
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      transition: background 0.3s ease-in-out;
+      transform: rotate(0.0001deg); }
+      #login-signup-section .login-signup-row .login .center-login {
+        width: 60%;
+        margin: 40% auto; }
+        #login-signup-section .login-signup-row .login .center-login label {
+          color: #0f0f0f;
+          line-height: 1.5rem; }
+        #login-signup-section .login-signup-row .login .center-login .input-container {
+          width: 100%;
+          height: 2.5em;
+          background: #fff;
+          border-radius: 5px; }
+          #login-signup-section .login-signup-row .login .center-login .input-container input {
+            width: 95%;
+            height: 100%;
+            margin-left: 1em;
+            border: 0;
+            outline: none; }
+            #login-signup-section .login-signup-row .login .center-login .input-container input::-moz-focus-inner {
+              border: 0;
+              outline: none; }
+        #login-signup-section .login-signup-row .login .center-login .username-container {
+          margin-bottom: 1em; }
+        #login-signup-section .login-signup-row .login .center-login .password-container {
+          margin-bottom: 2em; }
+        #login-signup-section .login-signup-row .login .center-login .login-form-btn {
+          font-family: 'Montserrat', sans-serif;
+          font-size: 0.9rem;
+          font-weight: 500;
+          color: #0f0f0f;
+          padding: 0.7em 1.2em;
+          border: 0;
+          outline: none;
+          border-radius: 5px;
+          cursor: pointer;
+          background: #fff;
+          transition: background 0.3s ease-in-out; }
+          #login-signup-section .login-signup-row .login .center-login .login-form-btn:hover {
+            color: #2F4858;
+            background: #00FF00; }
+    #login-signup-section .login-signup-row .signup {
+      height: inherit;
+      width: 50%;
+      color: #fff;
+      background: rgba(0, 255, 0, 0.6);
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      transition: background 0.3s ease-in-out; }
+      #login-signup-section .login-signup-row .signup .center-signup {
+        width: 60%;
+        margin: 30% auto; }
+        #login-signup-section .login-signup-row .signup .center-signup label {
+          color: #0f0f0f;
+          line-height: 1.5rem; }
+        #login-signup-section .login-signup-row .signup .center-signup .input-container {
+          height: 2.5em;
+          background: #fff;
+          border-radius: 5px; }
+          #login-signup-section .login-signup-row .signup .center-signup .input-container input {
+            width: 95%;
+            height: 100%;
+            margin-left: 1em;
+            border: 0;
+            outline: none; }
+            #login-signup-section .login-signup-row .signup .center-signup .input-container input::-moz-focus-inner {
+              border: 0;
+              outline: none; }
+        #login-signup-section .login-signup-row .signup .center-signup .username-container {
+          margin-bottom: 1em; }
+        #login-signup-section .login-signup-row .signup .center-signup .password-container {
+          margin-bottom: 1em; }
+        #login-signup-section .login-signup-row .signup .center-signup .confirm-password-container {
+          margin-bottom: 2em; }
+      #login-signup-section .login-signup-row .signup .signup-form-btn {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #0f0f0f;
+        padding: 0.7em 1.2em;
+        border: 0;
+        outline: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background: #fff;
+        transition: background 0.3s ease-in-out;
+        transform: rotate(0.0001deg); }
+        #login-signup-section .login-signup-row .signup .signup-form-btn:hover {
+          color: #2F4858;
+          background: #00FF00; }
