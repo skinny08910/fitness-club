@@ -120,7 +120,8 @@ img {
         width: 16%; }
         #header-section .nav-bar .link-container .nav-btns .login-btn {
           color: #fff;
-          transition: all 0.3s ease-in-out; }
+          transition: all 0.3s ease-in-out;
+          cursor: pointer; }
           #header-section .nav-bar .link-container .nav-btns .login-btn:hover {
             color: #00FF00; }
         #header-section .nav-bar .link-container .nav-btns .signup-btn {
@@ -128,7 +129,8 @@ img {
           padding: 0.7em 1.2em;
           border-radius: 5px;
           background: #00FF00;
-          transition: all 0.3s ease-in-out; }
+          transition: all 0.3s ease-in-out;
+          cursor: pointer; }
           #header-section .nav-bar .link-container .nav-btns .signup-btn:hover {
             color: #00FF00;
             background: #2F4858; }
@@ -168,7 +170,7 @@ img {
     width: 60%; }
     #jumbo-section .placeholder-video .video-pl-container {
       background-image: url("../../img/jumbo-img.jpg");
-      background-image: linear-gradient(to bottom right, rgba(47, 72, 88, 0.6) 100%, rgba(47, 72, 88, 0.4) 100%), url("../../img/promo-video-poster.png");
+      background-image: linear-gradient(to bottom right, rgba(47, 72, 88, 0.6) 100%, rgba(47, 72, 88, 0.4) 100%), url("../../img/promo-video-poster.jpg");
       background-repeat: no-repeat;
       -webkit-background-size: cover;
       -moz-background-size: cover;

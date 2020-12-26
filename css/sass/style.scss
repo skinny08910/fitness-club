@@ -97,6 +97,7 @@ img {
         .login-btn {
           color     : #fff;
           transition: all 0.3s ease-in-out;
+          cursor    : pointer;
 
           &:hover {
             color: $green-color;
@@ -109,6 +110,7 @@ img {
           border-radius: 5px;
           background   : $green-color;
           transition   : all 0.3s ease-in-out;
+          cursor       : pointer;
 
           &:hover {
             color     : $green-color;
@@ -166,7 +168,7 @@ img {
     // Video Placeholder
     .video-pl-container {
       background-image       : url("../../img/jumbo-img.jpg"); // Fallback
-      background-image       : linear-gradient(to bottom right, rgba($charcoal, .6) 100%, rgba($charcoal, .4) 100%), url("../../img/promo-video-poster.png");
+      background-image       : linear-gradient(to bottom right, rgba($charcoal, .6) 100%, rgba($charcoal, .4) 100%), url("../../img/promo-video-poster.jpg");
       background-repeat      : no-repeat;
       -webkit-background-size: cover;
       -moz-background-size   : cover;

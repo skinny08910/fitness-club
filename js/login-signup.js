@@ -8,8 +8,10 @@ var logInEl = document.querySelector(".login");
 var signUpEl = document.querySelector(".signup");
 var loginInputEl = document.querySelectorAll(".login-input");
 var signupInputEl = document.querySelectorAll(".signup-input");
-var loginBtn = document.querySelector(".login-form-btn");
-var signupBtn = document.querySelector(".signup-form-btn");
+var loginFormBtn = document.querySelector(".login-form-btn");
+var signupFormBtn = document.querySelector(".signup-form-btn");
+var loginNavBtn = document.querySelector(".login-btn");
+var signupNavBtn = document.querySelector(".signup-btn");
 
 var i;
 var a;
@@ -26,7 +28,7 @@ for (var i = 0; i < loginInputEl.length; i++) {
 		togSignUpEl.style.backgroundColor = ""
 		logInEl.style.backgroundColor = "rgba(0, 255, 0, .7)";
 		signUpEl.style.backgroundColor = "";
-	})
+	});
 }
 
 // Loop for Signup input fields
@@ -48,9 +50,9 @@ togLogInEl.addEventListener("click", function () {
 	signUpEl.style.backgroundColor = "";
 });
 
-// Login Button
+// Login Form Button
 
-loginBtn.addEventListener("click", function () {
+loginFormBtn.addEventListener("click", function () {
 	togLogInEl.style.backgroundColor = "rgba(0, 255, 0, .9)"
 	togSignUpEl.style.backgroundColor = ""
 	logInEl.style.backgroundColor = "rgba(0, 255, 0, .7)";
@@ -66,11 +68,35 @@ togSignUpEl.addEventListener("click", function () {
 	logInEl.style.backgroundColor = "";
 });
 
-// Signup Button
+// Signup Form Button
 
-signupBtn.addEventListener("click", function () {
+signupFormBtn.addEventListener("click", function () {
 	togSignUpEl.style.backgroundColor = "rgba(0, 255, 0, .9)"
 	togLogInEl.style.backgroundColor = ""
 	signUpEl.style.backgroundColor = "rgba(0, 255, 0, .7)";
 	logInEl.style.backgroundColor = "";
+});
+
+/****************** Login and Signup Nav ******************/
+
+// Login Nav Button
+
+loginNavBtn.addEventListener("click", function () {
+	togLogInEl.style.backgroundColor = "rgba(0, 255, 0, .9)"
+	togSignUpEl.style.backgroundColor = ""
+	logInEl.style.backgroundColor = "rgba(0, 255, 0, .7)";
+	signUpEl.style.backgroundColor = "";
+
+	loginInputEl[0].focus();
+});
+
+// Signup Nav Button
+
+signupNavBtn.addEventListener("click", function () {
+	togSignUpEl.style.backgroundColor = "rgba(0, 255, 0, .9)"
+	togLogInEl.style.backgroundColor = ""
+	signUpEl.style.backgroundColor = "rgba(0, 255, 0, .7)";
+	logInEl.style.backgroundColor = "";
+
+	signupInputEl[0].focus();
 });
