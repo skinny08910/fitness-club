@@ -1,3 +1,41 @@
+/****************** Mobile Menu ******************/
+
+// Getting the elements for the menu
+var hamMenu = document.querySelector(".hamburger-menu");
+var mobileMenu = document.querySelector(".mobile-menu");
+var navLinks = document.querySelector(".mobile-menu")
+	.querySelectorAll(".link");
+var logInEl = document.querySelector(".mobile-menu")
+	.querySelector(".login-btn");
+var signUpEl = document.querySelector(".mobile-menu")
+	.querySelector(".signup-btn");
+
+var i;
+
+// Adding event listeners to the elements
+hamMenu.addEventListener("click", function () {
+	mobileMenu.classList.toggle("active");
+});
+
+// Adding event listeners on the nav links to remove the "active" class when the nav links are click
+
+// Looping through the Mobile Nav Links
+for (var i = 0; i < navLinks.length; i++) {
+	navLinks[i].addEventListener("click", function () {
+		mobileMenu.classList.remove("active");
+	});
+}
+
+// Login
+logInEl.addEventListener("click", function () {
+	mobileMenu.classList.remove("active");
+});
+
+// Signup
+signUpEl.addEventListener("click", function () {
+	mobileMenu.classList.remove("active");
+});
+
 /****************** Jumbo Video ******************/
 
 // Getting the elements for the video

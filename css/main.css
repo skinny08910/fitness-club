@@ -85,11 +85,7 @@ img {
   margin: 0 auto; }
 
 .center {
-  width: inherit;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
+  padding-top: 25%; }
 
 .row {
   display: flex;
@@ -136,6 +132,65 @@ img {
             background: #2F4858; }
         #header-section .nav-bar .link-container .nav-btns .signin-btn + .signup-btn {
           margin-left: 1em; }
+    #header-section .nav-bar .hamburger-menu {
+      display: none;
+      width: 40px;
+      cursor: pointer; }
+      #header-section .nav-bar .hamburger-menu .line {
+        height: 6px;
+        background: #fff;
+        border-radius: 5px; }
+        #header-section .nav-bar .hamburger-menu .line:not(:last-child) {
+          margin-bottom: 0.2em; }
+
+/* Mobile Menu Styles ***********************/
+.mobile-menu {
+  display: none;
+  width: 50%;
+  height: 100vh;
+  background: #2F4858;
+  position: absolute;
+  top: 5%;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  transform: translate3d(100%, 0, 0);
+  z-index: 1; }
+  .mobile-menu.active {
+    transform: translate3d(0, 0, 0); }
+  .mobile-menu .links {
+    width: 100%;
+    margin: 4em 0 2em; }
+    .mobile-menu .links .link {
+      margin-left: 1em; }
+      .mobile-menu .links .link:not(:last-child) {
+        margin-bottom: 0.6em; }
+      .mobile-menu .links .link a {
+        display: block;
+        color: #fff;
+        transition: all 0.3s ease-in-out; }
+        .mobile-menu .links .link a:hover {
+          color: #00FF00; }
+  .mobile-menu .nav-btns {
+    width: 100%;
+    margin: 1em 0 0; }
+    .mobile-menu .nav-btns .login-btn {
+      color: #fff;
+      margin-left: 1em;
+      transition: all 0.5s ease-in-out;
+      cursor: pointer; }
+      .mobile-menu .nav-btns .login-btn:hover {
+        color: #00FF00; }
+    .mobile-menu .nav-btns .signup-btn {
+      color: #0f0f0f;
+      padding: 0.7em 1.2em;
+      border-radius: 5px;
+      background: #00FF00;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+      margin-left: 1em; }
+      .mobile-menu .nav-btns .signup-btn:hover {
+        color: #0f0f0f;
+        background: #fff; }
 
 /* Jumbo Styles ***********************/
 #jumbo-section {
@@ -284,6 +339,7 @@ img {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-position: top;
     border-radius: 5px;
     width: 60%;
     height: 30em; }
@@ -426,7 +482,6 @@ img {
           width: 50%;
           height: 100%; }
   #review-section .review-grid {
-    color: #fff;
     width: 40%; }
     #review-section .review-grid .slider-container {
       width: 100%;
@@ -440,25 +495,24 @@ img {
         border-radius: 5px;
         transition: all 0.5s ease-in-out; }
         #review-section .review-grid .slider-container .box .review-description-container {
-          position: relative; }
+          position: relative;
+          color: #2F4858; }
           #review-section .review-grid .slider-container .box .review-description-container .review-description {
             font-style: italic;
             line-height: 1.5rem;
-            color: #2F4858;
             margin-top: 2rem;
-            position: sticky;
+            position: relative;
             z-index: 10; }
         #review-section .review-grid .slider-container .box .reviewer-img {
           width: 100px;
           height: 100px;
-          margin: 2em auto; }
+          margin: 3em auto 2em; }
           #review-section .review-grid .slider-container .box .reviewer-img img {
             width: 100%;
             height: 100%;
             border-radius: 50%; }
         #review-section .review-grid .slider-container .box .reviewer-name {
           font-weight: 500;
-          color: #2F4858;
           text-align: center;
           margin-bottom: 1em; }
       #review-section .review-grid .slider-container .box-1 {
@@ -466,20 +520,19 @@ img {
         z-index: 30; }
         #review-section .review-grid .slider-container .box-1 .quote-left {
           width: 45px;
-          height: 45px;
-          position: absolute;
-          top: -45%;
-          left: -2%; }
-          #review-section .review-grid .slider-container .box-1 .quote-left .icon {
+          height: 45px; }
+          #review-section .review-grid .slider-container .box-1 .quote-left .icon-quotes-left {
             width: 100%;
             height: 100%;
             fill: #fff; }
         #review-section .review-grid .slider-container .box-1 .quote-right {
+          float: right;
           width: 45px;
-          height: 45px;
-          position: absolute;
-          bottom: -30%;
-          right: 24%; }
+          height: 45px; }
+          #review-section .review-grid .slider-container .box-1 .quote-right::after {
+            content: "";
+            clear: both;
+            display: table; }
           #review-section .review-grid .slider-container .box-1 .quote-right .icon {
             width: 100%;
             height: 100%;
@@ -489,20 +542,19 @@ img {
         z-index: 20; }
         #review-section .review-grid .slider-container .box-2 .quote-left {
           width: 45px;
-          height: 45px;
-          position: absolute;
-          top: -30%;
-          left: -2%; }
-          #review-section .review-grid .slider-container .box-2 .quote-left .icon {
+          height: 45px; }
+          #review-section .review-grid .slider-container .box-2 .quote-left .icon-quotes-left {
             width: 100%;
             height: 100%;
             fill: #fff; }
         #review-section .review-grid .slider-container .box-2 .quote-right {
+          float: right;
           width: 45px;
-          height: 45px;
-          position: absolute;
-          bottom: -28%;
-          right: 2%; }
+          height: 45px; }
+          #review-section .review-grid .slider-container .box-2 .quote-right::after {
+            content: "";
+            clear: both;
+            display: table; }
           #review-section .review-grid .slider-container .box-2 .quote-right .icon {
             width: 100%;
             height: 100%;
@@ -512,20 +564,19 @@ img {
         z-index: 10; }
         #review-section .review-grid .slider-container .box-3 .quote-left {
           width: 45px;
-          height: 45px;
-          position: absolute;
-          top: -45%;
-          left: -2%; }
-          #review-section .review-grid .slider-container .box-3 .quote-left .icon {
+          height: 45px; }
+          #review-section .review-grid .slider-container .box-3 .quote-left .icon-quotes-left {
             width: 100%;
             height: 100%;
             fill: #fff; }
         #review-section .review-grid .slider-container .box-3 .quote-right {
+          float: right;
           width: 45px;
-          height: 45px;
-          position: absolute;
-          bottom: -36%;
-          right: 19%; }
+          height: 45px; }
+          #review-section .review-grid .slider-container .box-3 .quote-right::after {
+            content: "";
+            clear: both;
+            display: table; }
           #review-section .review-grid .slider-container .box-3 .quote-right .icon {
             width: 100%;
             height: 100%;
@@ -535,20 +586,19 @@ img {
         z-index: 0; }
         #review-section .review-grid .slider-container .box-4 .quote-left {
           width: 45px;
-          height: 45px;
-          position: absolute;
-          top: -45%;
-          left: -2%; }
-          #review-section .review-grid .slider-container .box-4 .quote-left .icon {
+          height: 45px; }
+          #review-section .review-grid .slider-container .box-4 .quote-left .icon-quotes-left {
             width: 100%;
             height: 100%;
             fill: #fff; }
         #review-section .review-grid .slider-container .box-4 .quote-right {
+          float: right;
           width: 45px;
-          height: 45px;
-          position: absolute;
-          bottom: -36%;
-          right: 44%; }
+          height: 45px; }
+          #review-section .review-grid .slider-container .box-4 .quote-right::after {
+            content: "";
+            clear: both;
+            display: table; }
           #review-section .review-grid .slider-container .box-4 .quote-right .icon {
             width: 100%;
             height: 100%;
@@ -781,7 +831,7 @@ img {
     #footer-section .footer-container .copyright {
       text-align: center; }
 
-/* Log and Signup Styles ***********************/
+/****************************** Login and Signup Page Styles ******************************/
 #login-signup-section {
   height: 105vh;
   background: #2F4858;
@@ -921,3 +971,278 @@ img {
         #login-signup-section .login-signup-row .signup .signup-form-btn:hover {
           color: #2F4858;
           background: #00FF00; }
+
+/*************************************** Media Queries ************************************/
+/* Ipad and Tablet ***********************/
+@media only screen and (max-width: 900px) {
+  html {
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden; }
+  body {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden; }
+  .container {
+    width: 95%; }
+  #header-section {
+    position: relative;
+    z-index: 100; }
+    #header-section .nav-bar {
+      background: #2F4858; }
+      #header-section .nav-bar .link-container {
+        display: none; }
+      #header-section .nav-bar .hamburger-menu {
+        display: block; }
+  /* Mobile Menu Styles *************/
+  .mobile-menu {
+    display: block; }
+  /* Jumbo Styles *************/
+  #jumbo-section {
+    margin-top: 0;
+    height: auto;
+    padding: 10% 0; }
+    #jumbo-section .center {
+      padding-top: 0; }
+      #jumbo-section .center .jumbo-text {
+        width: 100%; }
+        #jumbo-section .center .jumbo-text .jumbo-main-title {
+          font-size: 3.2rem;
+          margin-bottom: 0.7em; }
+      #jumbo-section .center .placeholder-video {
+        width: 100%; }
+      #jumbo-section .center .jumbo-text + .placeholder-video {
+        margin-left: 2em; }
+    #jumbo-section .video-box .video-player {
+      width: 90%;
+      top: 55%; }
+    #jumbo-section .exit-box {
+      top: 10%;
+      right: 5%; }
+  /* About Styles *************/
+  #about-section .about-img {
+    width: 100%;
+    margin-bottom: 5em; }
+  #about-section .about-description {
+    width: 100%; }
+    #about-section .about-description .about-title {
+      font-size: 3.2rem; }
+  #about-section .about-img + .about-description {
+    margin-left: 2em; }
+  /* Our Team Styles *************/
+  #our-team-section .team-main-title {
+    font-size: 3.2rem; }
+  #our-team-section .box:not(:last-child) {
+    margin-bottom: 10em; }
+  #our-team-section .box .box-description {
+    width: 100%;
+    margin-bottom: 5em; }
+    #our-team-section .box .box-description .name {
+      font-size: 2.2rem;
+      line-height: 2.5rem; }
+  #our-team-section .box .box-img {
+    width: 100%;
+    height: 50em; }
+  #our-team-section .box .box-description + .box-img {
+    margin-left: 2em; }
+  #our-team-section .box-2 .box-img {
+    margin: 0 0 5em; }
+  #our-team-section .box-2 .box-img + .box-description {
+    margin: 0 0 0 2em; }
+  /* Review Styles *************/
+  #review-section .review-big-title {
+    font-size: 3.2rem; }
+  #review-section .review-text {
+    width: 100%;
+    margin-bottom: 4em; }
+  #review-section .review-grid {
+    width: 100%; }
+    #review-section .review-grid .box-1 .review-description-container .quote-left {
+      left: -1%; }
+    #review-section .review-grid .box-1 .review-description-container .quote-right {
+      right: 10%; }
+    #review-section .review-grid .box-2 .review-description-container .quote-left {
+      left: -1%; }
+    #review-section .review-grid .box-2 .review-description-container .quote-right {
+      right: 86%; }
+    #review-section .review-grid .box-3 .review-description-container .quote-left {
+      top: -26%;
+      left: -1%; }
+    #review-section .review-grid .box-3 .review-description-container .quote-right {
+      top: 60%;
+      right: 91%; }
+    #review-section .review-grid .box-4 .review-description-container .quote-left {
+      top: -40%;
+      left: -1%; }
+    #review-section .review-grid .box-4 .review-description-container .quote-right {
+      top: 48%;
+      right: 40%; }
+  #review-section .review-text + .review-grid {
+    margin-left: 2em; }
+  /* Plan Styles *************/
+  #plan-section .plan-big-title {
+    font-size: 3.2rem; }
+  #plan-section .plan-grid-container {
+    grid-template-columns: 1fr; }
+  /* Contact Styles *************/
+  #contact-section .contact-big-title {
+    font-size: 3.2rem; }
+  #contact-section .contact-form {
+    width: 100%;
+    padding: 0; }
+    #contact-section .contact-form .input-container input {
+      width: 95%; }
+    #contact-section .contact-form .input-container textarea {
+      width: 95%; }
+    #contact-section .contact-form .first-last-container .first-name-container {
+      width: 100%; }
+    #contact-section .contact-form .first-last-container .last-name-container {
+      width: 100%; }
+    #contact-section .contact-form .first-last-container .first-name-container + .last-name-container {
+      margin-left: 0; }
+  /* Footer Styles *************/
+  #footer-section .footer-container {
+    width: 90%; }
+    #footer-section .footer-container .footer-grid .box + .box {
+      margin-left: 0; } }
+
+/* Phone ***********************/
+@media only screen and (max-width: 600px) {
+  html {
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden; }
+  body {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden; }
+  .container {
+    width: 95%; }
+  .row {
+    flex-wrap: wrap; }
+  #header-section {
+    position: relative;
+    z-index: 100; }
+    #header-section .nav-bar {
+      background: #2F4858; }
+      #header-section .nav-bar .link-container {
+        display: none; }
+      #header-section .nav-bar .hamburger-menu {
+        display: block; }
+  /* Mobile Menu Styles *************/
+  .mobile-menu {
+    display: block; }
+  /* Jumbo Styles *************/
+  #jumbo-section {
+    margin-top: 0;
+    height: auto;
+    padding: 10% 0; }
+    #jumbo-section .center {
+      padding-top: 0; }
+      #jumbo-section .center .jumbo-text {
+        width: 100%;
+        margin-bottom: 5em; }
+        #jumbo-section .center .jumbo-text .jumbo-main-title {
+          font-size: 3.2rem;
+          margin-bottom: 0.7em; }
+      #jumbo-section .center .placeholder-video {
+        width: 100%; }
+      #jumbo-section .center .jumbo-text + .placeholder-video {
+        margin-left: 0; }
+    #jumbo-section .video-box .video-player {
+      width: 90%;
+      top: 55%; }
+    #jumbo-section .exit-box {
+      top: 10%;
+      right: 5%; }
+  /* About Styles *************/
+  #about-section .about-img {
+    width: 100%;
+    margin-bottom: 5em; }
+  #about-section .about-description {
+    width: 100%; }
+    #about-section .about-description .about-title {
+      font-size: 3.2rem; }
+  #about-section .about-img + .about-description {
+    margin-left: 0; }
+  /* Our Team Styles *************/
+  #our-team-section .team-main-title {
+    text-align: left;
+    font-size: 3.2rem; }
+  #our-team-section .box:not(:last-child) {
+    margin-bottom: 10em; }
+  #our-team-section .box .box-description {
+    width: 100%;
+    margin-bottom: 5em; }
+    #our-team-section .box .box-description .name {
+      font-size: 2.2rem;
+      line-height: 2.5rem; }
+  #our-team-section .box .box-img {
+    width: 100%; }
+  #our-team-section .box .box-description + .box-img {
+    margin-left: 0; }
+  #our-team-section .box-2 .box-img {
+    margin: 0 0 5em; }
+  #our-team-section .box-2 .box-img + .box-description {
+    margin: 0 0 5em; }
+  /* Review Styles *************/
+  #review-section .review-big-title {
+    font-size: 3.2rem; }
+  #review-section .review-text {
+    width: 100%;
+    margin-bottom: 4em; }
+    #review-section .review-text .slider-btn-container {
+      display: none; }
+  #review-section .review-grid {
+    width: 100%; }
+    #review-section .review-grid .box-1 .review-description-container .quote-left {
+      left: -1%; }
+    #review-section .review-grid .box-1 .review-description-container .quote-right {
+      right: 10%; }
+    #review-section .review-grid .box-2 .review-description-container .quote-left {
+      left: -1%; }
+    #review-section .review-grid .box-2 .review-description-container .quote-right {
+      right: 86%; }
+    #review-section .review-grid .box-3 .review-description-container .quote-left {
+      top: -26%;
+      left: -1%; }
+    #review-section .review-grid .box-3 .review-description-container .quote-right {
+      top: 60%;
+      right: 91%; }
+    #review-section .review-grid .box-4 .review-description-container .quote-left {
+      top: -40%;
+      left: -1%; }
+    #review-section .review-grid .box-4 .review-description-container .quote-right {
+      top: 48%;
+      right: 40%; }
+    #review-section .review-grid .slider-btn-container {
+      display: block;
+      margin-top: 8em; }
+  /* Plan Styles *************/
+  #plan-section .plan-big-title {
+    font-size: 3.2rem; }
+  #plan-section .plan-grid-container {
+    grid-template-columns: 1fr; }
+  /* Contact Styles *************/
+  #contact-section .contact-big-title {
+    font-size: 3.2rem; }
+  #contact-section .contact-form {
+    width: 100%;
+    padding: 0; }
+    #contact-section .contact-form .input-container input {
+      width: 95%; }
+    #contact-section .contact-form .input-container textarea {
+      width: 95%; }
+    #contact-section .contact-form .first-last-container .first-name-container {
+      width: 100%; }
+    #contact-section .contact-form .first-last-container .last-name-container {
+      width: 100%; }
+    #contact-section .contact-form .first-last-container .first-name-container + .last-name-container {
+      margin-left: 0; }
+  /* Footer Styles *************/
+  #footer-section .footer-container {
+    width: 90%; }
+    #footer-section .footer-container .footer-grid .box + .box {
+      margin-left: 0; } }
