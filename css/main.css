@@ -55,7 +55,7 @@
   padding: 0; }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.9rem;
   font-weight: 500;
   color: #0f0f0f; }
@@ -154,7 +154,7 @@ img {
   right: 0;
   transition: all 0.3s ease-in-out;
   transform: translate3d(100%, 0, 0);
-  z-index: 1; }
+  z-index: 10; }
   .mobile-menu.active {
     transform: translate3d(0, 0, 0); }
   .mobile-menu .links {
@@ -326,6 +326,8 @@ img {
     margin-bottom: 1em;
     cursor: pointer;
     z-index: 100; }
+    #jumbo-section .exit-box:hover {
+      color: #00FF00; }
 
 /* About Styles ***********************/
 #about-section {
@@ -360,7 +362,7 @@ img {
   padding: 10em 0;
   background: #2F4858;
   background-image: url("../../img/team-bg-img.jpg");
-  background-image: linear-gradient(to bottom right, rgba(47, 72, 88, 0.7) 100%, rgba(47, 72, 88, 0.7) 100%), url("../../img/team-bg-img.jpg");
+  background-image: linear-gradient(to bottom right, rgba(47, 72, 88, 0.8) 100%, rgba(47, 72, 88, 0.8) 100%), url("../../img/team-bg-img.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: cover;
@@ -766,7 +768,7 @@ img {
       background: #fff;
       border-radius: 5px; }
       #contact-section .contact-form .message-container textarea {
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
         font-size: 0.9rem;
         font-weight: 500;
         color: #0f0f0f;
@@ -780,7 +782,7 @@ img {
           border: 0;
           outline: none; }
     #contact-section .contact-form .submit-btn {
-      font-family: 'Montserrat', sans-serif;
+      font-family: "Montserrat", sans-serif;
       font-size: 0.9rem;
       font-weight: 500;
       color: #0f0f0f;
@@ -855,7 +857,7 @@ img {
       top: -3%;
       left: 50%;
       transform: translate(-46%, 0);
-      z-index: 100; }
+      z-index: 1; }
       #login-signup-section .login-signup-row .login-and-sigup-btn .toggle-login {
         padding: 0.5em 0.4em 0.5em 1em;
         border-right: 1px solid #fff;
@@ -908,7 +910,7 @@ img {
         #login-signup-section .login-signup-row .login .center-login .password-container {
           margin-bottom: 2em; }
         #login-signup-section .login-signup-row .login .center-login .login-form-btn {
-          font-family: 'Montserrat', sans-serif;
+          font-family: "Montserrat", sans-serif;
           font-size: 0.9rem;
           font-weight: 500;
           color: #0f0f0f;
@@ -956,7 +958,7 @@ img {
         #login-signup-section .login-signup-row .signup .center-signup .confirm-password-container {
           margin-bottom: 2em; }
       #login-signup-section .login-signup-row .signup .signup-form-btn {
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
         font-size: 0.9rem;
         font-weight: 500;
         color: #0f0f0f;
@@ -973,36 +975,57 @@ img {
           background: #00FF00; }
 
 /*************************************** Media Queries ************************************/
-/* Ipad and Tablet ***********************/
-@media only screen and (max-width: 900px) {
-  html {
-    height: 100vh;
-    width: 100%;
-    overflow-x: hidden; }
-  body {
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    overflow-x: hidden; }
+/* Laptop with HIDPI screen ***********************/
+@media only screen and (max-width: 1440px) {
   .container {
-    width: 95%; }
-  #header-section {
-    position: relative;
-    z-index: 100; }
-    #header-section .nav-bar {
-      background: #2F4858; }
-      #header-section .nav-bar .link-container {
-        display: none; }
-      #header-section .nav-bar .hamburger-menu {
-        display: block; }
-  /* Mobile Menu Styles *************/
-  .mobile-menu {
-    display: block; }
+    width: 80%; }
+  #header-section .nav-bar .link-container .links {
+    width: 50%; }
+    #header-section .nav-bar .link-container .links .row {
+      justify-content: space-around; }
+  #header-section .nav-bar .link-container .nav-btns {
+    width: 20%; }
+  /* Contact Styles *************/
+  #contact-section .contact-big-title {
+    font-size: 3.2rem; }
+  #contact-section .contact-form {
+    width: 85%;
+    padding: 0; }
+    #contact-section .contact-form .input-container input {
+      width: 95%; }
+    #contact-section .contact-form .input-container textarea {
+      width: 98%;
+      height: 90%; }
+    #contact-section .contact-form .first-last-container .first-name-container {
+      width: 100%; }
+    #contact-section .contact-form .first-last-container .last-name-container {
+      width: 100%; }
+  /************************************************* LogIn And SignUp Media Query Styles *****************************/
+  #login-signup-section {
+    height: 1000px; }
+    #login-signup-section .container {
+      width: 75%; }
+      #login-signup-section .container .center {
+        padding-top: 15em; }
+        #login-signup-section .container .center .login-signup-row {
+          width: 100%; } }
+
+/* Laptops ***********************/
+@media only screen and (max-width: 1280px) {
+  .container {
+    width: 85%; }
+  #header-section .nav-bar .link-container .links {
+    width: 50%; }
+    #header-section .nav-bar .link-container .links .row {
+      justify-content: space-around; }
+  #header-section .nav-bar .link-container .nav-btns {
+    width: 20%; }
   /* Jumbo Styles *************/
   #jumbo-section {
-    margin-top: 0;
     height: auto;
     padding: 10% 0; }
+    #jumbo-section .container {
+      margin-top: 4em; }
     #jumbo-section .center {
       padding-top: 0; }
       #jumbo-section .center .jumbo-text {
@@ -1016,10 +1039,11 @@ img {
         margin-left: 2em; }
     #jumbo-section .video-box .video-player {
       width: 90%;
+      height: 80%;
       top: 55%; }
     #jumbo-section .exit-box {
-      top: 10%;
-      right: 5%; }
+      top: 5%;
+      right: 2%; }
   /* About Styles *************/
   #about-section .about-img {
     width: 100%;
@@ -1084,28 +1108,300 @@ img {
   #plan-section .plan-big-title {
     font-size: 3.2rem; }
   #plan-section .plan-grid-container {
-    grid-template-columns: 1fr; }
+    gap: 3em; }
   /* Contact Styles *************/
   #contact-section .contact-big-title {
     font-size: 3.2rem; }
   #contact-section .contact-form {
-    width: 100%;
+    width: 85%;
     padding: 0; }
     #contact-section .contact-form .input-container input {
       width: 95%; }
     #contact-section .contact-form .input-container textarea {
-      width: 95%; }
+      width: 98%;
+      height: 90%; }
     #contact-section .contact-form .first-last-container .first-name-container {
       width: 100%; }
     #contact-section .contact-form .first-last-container .last-name-container {
       width: 100%; }
-    #contact-section .contact-form .first-last-container .first-name-container + .last-name-container {
-      margin-left: 0; }
   /* Footer Styles *************/
   #footer-section .footer-container {
     width: 90%; }
     #footer-section .footer-container .footer-grid .box + .box {
-      margin-left: 0; } }
+      margin-left: 0; }
+  /************************************************* LogIn And SignUp Media Query Styles *****************************/
+  #login-signup-section {
+    height: 1000px; }
+    #login-signup-section .container {
+      width: 75%; }
+      #login-signup-section .container .center {
+        padding-top: 15em; }
+        #login-signup-section .container .center .login-signup-row {
+          width: 100%; } }
+
+/* iPad Pro ***********************/
+@media only screen and (max-width: 1024px) {
+  .container {
+    width: 85%; }
+  #header-section .nav-bar .link-container .links {
+    width: 55%; }
+    #header-section .nav-bar .link-container .links .row {
+      justify-content: space-around; }
+  #header-section .nav-bar .link-container .nav-btns {
+    width: 21%; }
+  /* Jumbo Styles *************/
+  #jumbo-section {
+    height: auto;
+    padding: 10% 0; }
+    #jumbo-section .container {
+      margin-top: 4em; }
+    #jumbo-section .center {
+      padding-top: 0; }
+      #jumbo-section .center .jumbo-text {
+        width: 100%; }
+        #jumbo-section .center .jumbo-text .jumbo-main-title {
+          font-size: 3.2rem;
+          margin-bottom: 0.7em; }
+      #jumbo-section .center .placeholder-video {
+        width: 100%; }
+      #jumbo-section .center .jumbo-text + .placeholder-video {
+        margin-left: 2em; }
+    #jumbo-section .video-box .video-player {
+      width: 90%;
+      height: 80%;
+      top: 55%; }
+    #jumbo-section .exit-box {
+      top: 5%;
+      right: 2%; }
+  /* About Styles *************/
+  #about-section .about-img {
+    width: 100%;
+    margin-bottom: 5em; }
+  #about-section .about-description {
+    width: 100%; }
+    #about-section .about-description .about-title {
+      font-size: 3.2rem; }
+  #about-section .about-img + .about-description {
+    margin-left: 2em; }
+  /* Our Team Styles *************/
+  #our-team-section .team-main-title {
+    font-size: 3.2rem; }
+  #our-team-section .box:not(:last-child) {
+    margin-bottom: 10em; }
+  #our-team-section .box .box-description {
+    width: 100%;
+    margin-bottom: 5em; }
+    #our-team-section .box .box-description .name {
+      font-size: 2.2rem;
+      line-height: 2.5rem; }
+  #our-team-section .box .box-img {
+    width: 100%;
+    height: 50em; }
+  #our-team-section .box .box-description + .box-img {
+    margin-left: 2em; }
+  #our-team-section .box-2 .box-img {
+    margin: 0 0 5em; }
+  #our-team-section .box-2 .box-img + .box-description {
+    margin: 0 0 0 2em; }
+  /* Review Styles *************/
+  #review-section .review-big-title {
+    font-size: 3.2rem; }
+  #review-section .review-text {
+    width: 100%;
+    margin-bottom: 4em; }
+  #review-section .review-grid {
+    width: 100%; }
+    #review-section .review-grid .box-1 .review-description-container .quote-left {
+      left: -1%; }
+    #review-section .review-grid .box-1 .review-description-container .quote-right {
+      right: 10%; }
+    #review-section .review-grid .box-2 .review-description-container .quote-left {
+      left: -1%; }
+    #review-section .review-grid .box-2 .review-description-container .quote-right {
+      right: 86%; }
+    #review-section .review-grid .box-3 .review-description-container .quote-left {
+      top: -26%;
+      left: -1%; }
+    #review-section .review-grid .box-3 .review-description-container .quote-right {
+      top: 60%;
+      right: 91%; }
+    #review-section .review-grid .box-4 .review-description-container .quote-left {
+      top: -40%;
+      left: -1%; }
+    #review-section .review-grid .box-4 .review-description-container .quote-right {
+      top: 48%;
+      right: 40%; }
+  #review-section .review-text + .review-grid {
+    margin-left: 2em; }
+  /* Plan Styles *************/
+  #plan-section .plan-big-title {
+    font-size: 3.2rem; }
+  #plan-section .plan-grid-container {
+    gap: 3em; }
+  /* Contact Styles *************/
+  #contact-section .contact-big-title {
+    font-size: 3.2rem; }
+  #contact-section .contact-form {
+    width: 85%;
+    padding: 0; }
+    #contact-section .contact-form .input-container input {
+      width: 95%; }
+    #contact-section .contact-form .input-container textarea {
+      width: 50%; }
+    #contact-section .contact-form .first-last-container .first-name-container {
+      width: 100%; }
+    #contact-section .contact-form .first-last-container .last-name-container {
+      width: 100%; }
+  /* Footer Styles *************/
+  #footer-section .footer-container {
+    width: 90%; }
+    #footer-section .footer-container .footer-grid .box + .box {
+      margin-left: 0; }
+  /************************************************* LogIn And SignUp Media Query Styles *****************************/
+  #login-signup-section {
+    height: 1200px; }
+    #login-signup-section .container {
+      width: 80%; }
+      #login-signup-section .container .center {
+        padding-top: 20em; }
+        #login-signup-section .container .center .login-signup-row {
+          width: 100%; } }
+
+/* iPad, and Tablet ***********************/
+@media only screen and (max-width: 770px) {
+  html {
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden; }
+  body {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden; }
+  .container {
+    width: 95%; }
+  #header-section {
+    position: relative;
+    z-index: 100; }
+    #header-section .nav-bar {
+      background: #2F4858; }
+      #header-section .nav-bar .link-container {
+        display: none; }
+      #header-section .nav-bar .hamburger-menu {
+        display: block; }
+  .mobile-menu {
+    display: block; }
+  /* Jumbo Styles *************/
+  #jumbo-section {
+    margin-top: 0;
+    height: auto;
+    padding: 10% 0; }
+    #jumbo-section .center {
+      padding-top: 0; }
+      #jumbo-section .center .jumbo-text {
+        width: 100%; }
+        #jumbo-section .center .jumbo-text .jumbo-main-title {
+          font-size: 3.2rem;
+          margin-bottom: 0.7em; }
+      #jumbo-section .center .placeholder-video {
+        width: 100%; }
+      #jumbo-section .center .jumbo-text + .placeholder-video {
+        margin-left: 2em; }
+    #jumbo-section .video-box .video-player {
+      width: 90%;
+      top: 55%; }
+    #jumbo-section .exit-box {
+      top: 8%;
+      right: 5%; }
+  /* About Styles *************/
+  #about-section .about-img {
+    width: 100%;
+    margin-bottom: 5em; }
+  #about-section .about-description {
+    width: 100%; }
+    #about-section .about-description .about-title {
+      font-size: 3.2rem; }
+  #about-section .about-img + .about-description {
+    margin-left: 2em; }
+  /* Our Team Styles *************/
+  #our-team-section .team-main-title {
+    font-size: 3.2rem; }
+  #our-team-section .box:not(:last-child) {
+    margin-bottom: 10em; }
+  #our-team-section .box .box-description {
+    width: 100%;
+    margin-bottom: 5em; }
+    #our-team-section .box .box-description .name {
+      font-size: 2.2rem;
+      line-height: 2.5rem; }
+  #our-team-section .box .box-img {
+    width: 100%;
+    height: 50em; }
+  #our-team-section .box .box-description + .box-img {
+    margin-left: 2em; }
+  #our-team-section .box-2 .box-img {
+    margin: 0 0 5em; }
+  #our-team-section .box-2 .box-img + .box-description {
+    margin: 0 0 0 2em; }
+  /* Review Styles *************/
+  #review-section .review-big-title {
+    font-size: 3.2rem; }
+  #review-section .review-text {
+    width: 100%; }
+  #review-section .review-grid {
+    width: 100%;
+    margin-top: -5em; }
+    #review-section .review-grid .box-1 .review-description-container .quote-left {
+      left: -1%; }
+    #review-section .review-grid .box-1 .review-description-container .quote-right {
+      right: 10%; }
+    #review-section .review-grid .box-2 .review-description-container .quote-left {
+      left: -1%; }
+    #review-section .review-grid .box-2 .review-description-container .quote-right {
+      right: 86%; }
+    #review-section .review-grid .box-3 .review-description-container .quote-left {
+      top: -26%;
+      left: -1%; }
+    #review-section .review-grid .box-3 .review-description-container .quote-right {
+      top: 60%;
+      right: 91%; }
+    #review-section .review-grid .box-4 .review-description-container .quote-left {
+      top: -40%;
+      left: -1%; }
+    #review-section .review-grid .box-4 .review-description-container .quote-right {
+      top: 48%;
+      right: 40%; }
+  /* Plan Styles *************/
+  #plan-section .plan-big-title {
+    font-size: 3.2rem; }
+  #plan-section .plan-grid-container {
+    gap: 2em; }
+  /* Contact Styles *************/
+  #contact-section .contact-big-title {
+    font-size: 3.2rem; }
+  #contact-section .contact-form {
+    width: 85%;
+    padding: 0; }
+    #contact-section .contact-form .input-container input {
+      width: 95%; }
+    #contact-section .contact-form .input-container textarea {
+      width: 50%; }
+    #contact-section .contact-form .first-last-container .first-name-container {
+      width: 100%; }
+    #contact-section .contact-form .first-last-container .last-name-container {
+      width: 100%; }
+  /* Footer Styles *************/
+  #footer-section .footer-container {
+    width: 90%; }
+    #footer-section .footer-container .footer-grid .box + .box {
+      margin-left: 0; }
+  /************************************************* LogIn And SignUp Media Query Styles *****************************/
+  #login-signup-section .container {
+    width: 80%; }
+    #login-signup-section .container .center {
+      padding-top: 18em; }
+      #login-signup-section .container .center .login-signup-row {
+        width: 100%; } }
 
 /* Phone ***********************/
 @media only screen and (max-width: 600px) {
@@ -1155,7 +1451,7 @@ img {
       width: 90%;
       top: 55%; }
     #jumbo-section .exit-box {
-      top: 10%;
+      top: 7%;
       right: 5%; }
   /* About Styles *************/
   #about-section .about-img {
@@ -1191,12 +1487,12 @@ img {
   #review-section .review-big-title {
     font-size: 3.2rem; }
   #review-section .review-text {
-    width: 100%;
-    margin-bottom: 4em; }
+    width: 100%; }
     #review-section .review-text .slider-btn-container {
       display: none; }
   #review-section .review-grid {
-    width: 100%; }
+    width: 100%;
+    margin-top: 3em; }
     #review-section .review-grid .box-1 .review-description-container .quote-left {
       left: -1%; }
     #review-section .review-grid .box-1 .review-description-container .quote-right {
@@ -1220,6 +1516,8 @@ img {
     #review-section .review-grid .slider-btn-container {
       display: block;
       margin-top: 8em; }
+  #review-section .review-text + .review-grid {
+    margin-left: 0; }
   /* Plan Styles *************/
   #plan-section .plan-big-title {
     font-size: 3.2rem; }
@@ -1245,4 +1543,29 @@ img {
   #footer-section .footer-container {
     width: 90%; }
     #footer-section .footer-container .footer-grid .box + .box {
-      margin-left: 0; } }
+      margin-left: 0; }
+  /************************************************* LogIn And SignUp Media Query Styles *****************************/
+  #login-signup-section {
+    height: 1200px; }
+    #login-signup-section .container {
+      width: 90%; }
+      #login-signup-section .container .center {
+        padding-top: 15em; }
+        #login-signup-section .container .center .login-signup-row {
+          width: 100%; }
+          #login-signup-section .container .center .login-signup-row .login-and-sigup-btn .toggle-login {
+            width: 50%; }
+          #login-signup-section .container .center .login-signup-row .login-and-sigup-btn .toggle-signup {
+            width: 50%; }
+          #login-signup-section .container .center .login-signup-row .login {
+            width: 100%;
+            height: 70%; }
+            #login-signup-section .container .center .login-signup-row .login .center-login {
+              width: 90%;
+              margin: 20% auto; }
+          #login-signup-section .container .center .login-signup-row .signup {
+            width: 100%;
+            height: 70%; }
+            #login-signup-section .container .center .login-signup-row .signup .center-signup {
+              width: 90%;
+              margin: 15% auto; } }

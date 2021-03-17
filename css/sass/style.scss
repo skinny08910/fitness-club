@@ -5,20 +5,20 @@
 *::after,
 *::before {
   box-sizing: border-box;
-  margin    : 0;
-  padding   : 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  font-size  : 0.9rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
   font-weight: 500;
-  color      : $dark-color;
+  color: $dark-color;
 }
 
 a {
   text-decoration: none;
-  color          : $dark-color;
+  color: $dark-color;
 }
 
 li {
@@ -26,23 +26,23 @@ li {
 }
 
 source {
-  width     : 100%;
-  max-width : 100%;
-  height    : 100%;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
 img {
-  width     : 100%;
-  max-width : 100%;
-  height    : 100%;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
 .container {
-  width    : 70%;
+  width: 70%;
   max-width: 1400px;
-  margin   : 0 auto;
+  margin: 0 auto;
 }
 
 .center {
@@ -50,8 +50,8 @@ img {
 }
 
 .row {
-  display        : flex;
-  align-items    : center;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 /* Header Styles ***********************/
@@ -63,10 +63,10 @@ img {
 
     .logo {
       & a {
-        display    : block;
-        font-size  : 1.5rem;
+        display: block;
+        font-size: 1.5rem;
         font-weight: 700;
-        color      : $green-color;
+        color: $green-color;
       }
     }
 
@@ -74,11 +74,11 @@ img {
       width: 100%;
 
       .links {
-        width : 40%;
+        width: 40%;
         margin: 0 auto;
 
         a {
-          color     : #fff;
+          color: #fff;
           transition: all 0.3s ease-in-out;
 
           &:hover {
@@ -91,9 +91,9 @@ img {
         width: 16%;
 
         .login-btn {
-          color     : #fff;
+          color: #fff;
           transition: all 0.3s ease-in-out;
-          cursor    : pointer;
+          cursor: pointer;
 
           &:hover {
             color: $green-color;
@@ -101,15 +101,15 @@ img {
         }
 
         .signup-btn {
-          color        : $dark-color;
-          padding      : 0.7em 1.2em;
+          color: $dark-color;
+          padding: 0.7em 1.2em;
           border-radius: 5px;
-          background   : $green-color;
-          transition   : all 0.3s ease-in-out;
-          cursor       : pointer;
+          background: $green-color;
+          transition: all 0.3s ease-in-out;
+          cursor: pointer;
 
           &:hover {
-            color     : $green-color;
+            color: $green-color;
             background: $charcoal;
           }
         }
@@ -122,12 +122,12 @@ img {
     // Hamburger Menu
     .hamburger-menu {
       display: none;
-      width  : 40px;
-      cursor : pointer;
+      width: 40px;
+      cursor: pointer;
 
       .line {
-        height       : 6px;
-        background   : #fff;
+        height: 6px;
+        background: #fff;
         border-radius: 5px;
 
         &:not(:last-child) {
@@ -139,23 +139,23 @@ img {
 }
 /* Mobile Menu Styles ***********************/
 .mobile-menu {
-  display   : none;
-  width     : 50%;
-  height    : 100vh;
+  display: none;
+  width: 50%;
+  height: 100vh;
   background: $charcoal;
-  position  : absolute;
-  top       : 5%;
-  right     : 0;
+  position: absolute;
+  top: 5%;
+  right: 0;
   transition: all 0.3s ease-in-out;
-  transform : translate3d(100%, 0, 0);
-  z-index   : 1;
+  transform: translate3d(100%, 0, 0);
+  z-index: 10;
 
   &.active {
     transform: translate3d(0, 0, 0);
   }
 
   .links {
-    width : 100%;
+    width: 100%;
     margin: 4em 0 2em;
 
     .link {
@@ -166,8 +166,8 @@ img {
       }
 
       a {
-        display   : block;
-        color     : #fff;
+        display: block;
+        color: #fff;
         transition: all 0.3s ease-in-out;
 
         &:hover {
@@ -178,14 +178,14 @@ img {
   }
   // Nav Btn
   .nav-btns {
-    width : 100%;
+    width: 100%;
     margin: 1em 0 0;
 
     .login-btn {
-      color      : #fff;
+      color: #fff;
       margin-left: 1em;
-      transition : all 0.5s ease-in-out;
-      cursor     : pointer;
+      transition: all 0.5s ease-in-out;
+      cursor: pointer;
 
       &:hover {
         color: $green-color;
@@ -193,16 +193,16 @@ img {
     }
 
     .signup-btn {
-      color        : $dark-color;
-      padding      : 0.7em 1.2em;
+      color: $dark-color;
+      padding: 0.7em 1.2em;
       border-radius: 5px;
-      background   : $green-color;
-      transition   : all 0.3s ease-in-out;
-      cursor       : pointer;
-      margin-left  : 1em;
+      background: $green-color;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+      margin-left: 1em;
 
       &:hover {
-        color     : $dark-color;
+        color: $dark-color;
         background: #fff;
       }
     }
@@ -210,36 +210,41 @@ img {
 }
 /* Jumbo Styles ***********************/
 #jumbo-section {
-  height                 : 105vh;
-  background             : $charcoal; // Fallback
-  background-image       : url("../../img/jumbo-img.jpg"); // Fallback
-  background-image       : linear-gradient(to bottom right, rgba($charcoal, .5) 100%, rgba($charcoal, .5) 100%), url("../../img/jumbo-img.jpg");
-  background-repeat      : no-repeat;
+  height: 105vh;
+  background: $charcoal; // Fallback
+  background-image: url("../../img/jumbo-img.jpg"); // Fallback
+  background-image: linear-gradient(
+      to bottom right,
+      rgba($charcoal, 0.5) 100%,
+      rgba($charcoal, 0.5) 100%
+    ),
+    url("../../img/jumbo-img.jpg");
+  background-repeat: no-repeat;
   -webkit-background-size: cover;
-  -moz-background-size   : cover;
-  -o-background-size     : cover;
-  background-size        : cover;
-  margin-top             : -6em;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-top: -6em;
   // Jumbo Text
   .jumbo-text {
     width: 40%;
     color: #fff;
 
     .jumbo-main-title {
-      font-size    : 3.5rem;
+      font-size: 3.5rem;
       margin-bottom: 0.7em;
     }
 
     .jumbo-btn {
-      font-weight  : 500;
-      color        : $dark-color;
-      background   : $green-color;
+      font-weight: 500;
+      color: $dark-color;
+      background: $green-color;
       border-radius: 5px;
-      padding      : 0.7em 1.2em;
-      transition   : all 0.3s ease-out;
+      padding: 0.7em 1.2em;
+      transition: all 0.3s ease-out;
 
       &:hover {
-        color     : $green-color;
+        color: $green-color;
         background: $charcoal;
       }
     }
@@ -247,79 +252,86 @@ img {
   // Jumbo Video
   .placeholder-video {
     display: flex;
-    width  : 60%;
+    width: 60%;
     // Video Placeholder
     .video-pl-container {
-      background-image       : url("../../img/jumbo-img.jpg"); // Fallback
-      background-image       : linear-gradient(to bottom right, rgba($charcoal, .6) 100%, rgba($charcoal, .4) 100%), url("../../img/promo-video-poster.jpg");
-      background-repeat      : no-repeat;
+      background-image: url("../../img/jumbo-img.jpg"); // Fallback
+      background-image: linear-gradient(
+          to bottom right,
+          rgba($charcoal, 0.6) 100%,
+          rgba($charcoal, 0.4) 100%
+        ),
+        url("../../img/promo-video-poster.jpg");
+      background-repeat: no-repeat;
       -webkit-background-size: cover;
-      -moz-background-size   : cover;
-      -o-background-size     : cover;
-      background-size        : cover;
-      border-radius          : 5px;
-      // width                  : 45em;
-      width                  : 100%;
-      height                 : 30em;
-      position               : relative;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      border-radius: 5px;
+      width: 100%;
+      height: 30em;
+      position: relative;
 
       .play-btn-container {
-        position : absolute;
-        top      : 50%;
-        left     : 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
         transform: translate(-50%, -50%);
 
         .play-btn {
-          width        : 100px;
-          height       : 100px;
-          background   : radial-gradient(rgba($charcoal, 0.6) 60%, rgba($green-color, 1) 62%);
+          width: 100px;
+          height: 100px;
+          background: radial-gradient(
+            rgba($charcoal, 0.6) 60%,
+            rgba($green-color, 1) 62%
+          );
           border-radius: 50%;
-          position     : relative;
-          display      : block;
-          margin       : 100px auto;
-          box-shadow   : 0 0 25px 3px $green-color;
-          cursor       : pointer;
+          position: relative;
+          display: block;
+          margin: 100px auto;
+          box-shadow: 0 0 25px 3px $green-color;
+          cursor: pointer;
         }
         /* triangle */
         .play-btn::after {
-          content           : "";
-          position          : absolute;
-          left              : 50%;
-          top               : 50%;
-          -webkit-transform : translateX(-40%) translateY(-50%);
-          transform         : translateX(-40%) translateY(-50%);
-          transform-origin  : center center;
-          width             : 0;
-          height            : 0;
-          border-top        : 15px solid transparent;
-          border-bottom     : 15px solid transparent;
-          border-left       : 25px solid $green-color;
-          z-index           : 100;
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          -webkit-transform: translateX(-40%) translateY(-50%);
+          transform: translateX(-40%) translateY(-50%);
+          transform-origin: center center;
+          width: 0;
+          height: 0;
+          border-top: 15px solid transparent;
+          border-bottom: 15px solid transparent;
+          border-left: 25px solid $green-color;
+          z-index: 100;
           -webkit-transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-          transition        : all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+          transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
         }
         /* pulse wave */
         .play-btn:before {
-          content                          : "";
-          position                         : absolute;
-          width                            : 150%;
-          height                           : 150%;
-          -webkit-animation-delay          : 0s;
-          animation-delay                  : 0s;
-          -webkit-animation                : pulestate 2s;
-          animation                        : pulestate 2s;
-          -webkit-animation-direction      : forwards;
-          animation-direction              : forwards;
+          content: "";
+          position: absolute;
+          width: 150%;
+          height: 150%;
+          -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+          -webkit-animation: pulestate 2s;
+          animation: pulestate 2s;
+          -webkit-animation-direction: forwards;
+          animation-direction: forwards;
           -webkit-animation-iteration-count: infinite;
-          animation-iteration-count        : infinite;
+          animation-iteration-count: infinite;
           -webkit-animation-timing-function: steps;
-          animation-timing-function        : steps;
-          opacity                          : 1;
-          border-radius                    : 50%;
-          border                           : 5px solid $green-color;
-          top                              : -25%;
-          left                             : -25%;
-          background                       : rgba($green-color, .5);
+          animation-timing-function: steps;
+          opacity: 1;
+          border-radius: 50%;
+          border: 5px solid $green-color;
+          top: -25%;
+          left: -25%;
+          background: rgba($green-color, 0.5);
         }
       }
     }
@@ -330,65 +342,78 @@ img {
   }
   // Video Box
   .video-box {
-    width     : 100%;
-    height    : 100%;
-    position  : relative;
+    width: 100%;
+    height: 100%;
+    position: relative;
     transition: all 0.3s ease-out;
 
     .video-player {
-      width        : 70%;
-      height       : 70%;
-      position     : fixed;
-      top          : 50%;
-      left         : 50%;
-      transform    : translate(-50%, -50%);
-      object-fit   : cover;
-      outline      : none;
-      border       : none;
+      width: 70%;
+      height: 70%;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      outline: none;
+      border: none;
       border-radius: 5px;
-      z-index      : 100;
+      z-index: 100;
     }
 
     .video-box-gradient {
-      width     : 100%;
-      height    : 100vh;
-      position  : fixed;
-      top       : 50%;
-      left      : 50%;
-      transform : translate(-50%, -50%);
-      background: linear-gradient(to bottom right, rgba($charcoal, .8) 100%, rgba($charcoal, .8) 100%);
-      z-index   : 50;
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(
+        to bottom right,
+        rgba($charcoal, 0.8) 100%,
+        rgba($charcoal, 0.8) 100%
+      );
+      z-index: 50;
     }
   }
   // Exit Box
   .exit-box {
-    position     : fixed;
-    top          : 5%;
-    right        : 10%;
-    color        : #fff;
-    font-size    : 2.5rem;
+    position: fixed;
+    top: 5%;
+    right: 10%;
+    color: #fff;
+    font-size: 2.5rem;
     margin-bottom: 1em;
-    cursor       : pointer;
-    z-index      : 100;
+    cursor: pointer;
+    z-index: 100;
+
+    &:hover {
+      color: $green-color;
+    }
   }
 }
 /* About Styles ***********************/
 #about-section {
-  padding   : 10em 0;
+  padding: 10em 0;
   background: $charcoal;
 
   .about-img {
-    background-image       : url("../../img/about-img.jpg"); // Fallback
-    background-image       : linear-gradient(to bottom right, rgba($charcoal, .3) 100%, rgba($charcoal, .3) 100%), url("../../img/about-img.jpg");
-    background-repeat      : no-repeat;
+    background-image: url("../../img/about-img.jpg"); // Fallback
+    background-image: linear-gradient(
+        to bottom right,
+        rgba($charcoal, 0.3) 100%,
+        rgba($charcoal, 0.3) 100%
+      ),
+      url("../../img/about-img.jpg");
+    background-repeat: no-repeat;
     -webkit-background-size: cover;
-    -moz-background-size   : cover;
-    -o-background-size     : cover;
-    background-size        : cover;
-    background-position    : top;
-    border-radius          : 5px;
-    width                  : 60%;
-    height                 : 30em;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: top;
+    border-radius: 5px;
+    width: 60%;
+    height: 30em;
   }
 
   .about-description {
@@ -396,8 +421,8 @@ img {
     color: #fff;
 
     .about-title {
-      font-size    : 3.5rem;
-      color        : $green-color;
+      font-size: 3.5rem;
+      color: $green-color;
       margin-bottom: 0.4em;
     }
 
@@ -412,33 +437,38 @@ img {
 }
 /* Team Styles ***********************/
 #our-team-section {
-  padding                : 10em 0;
-  background             : $charcoal; // Fallback
-  background-image       : url("../../img/team-bg-img.jpg"); // Fallback
-  background-image       : linear-gradient(to bottom right, rgba($charcoal, .7) 100%, rgba($charcoal, .7) 100%), url("../../img/team-bg-img.jpg");
-  background-repeat      : no-repeat;
-  background-position    : center center;
+  padding: 10em 0;
+  background: $charcoal; // Fallback
+  background-image: url("../../img/team-bg-img.jpg"); // Fallback
+  background-image: linear-gradient(
+      to bottom right,
+      rgba($charcoal, 0.8) 100%,
+      rgba($charcoal, 0.8) 100%
+    ),
+    url("../../img/team-bg-img.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
   -webkit-background-size: cover;
-  -moz-background-size   : cover;
-  -o-background-size     : cover;
-  background-size        : cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
   .team-main-title {
-    text-align   : center;
-    color        : $green-color;
-    font-size    : 3.5rem;
+    text-align: center;
+    color: $green-color;
+    font-size: 3.5rem;
     margin-bottom: 2em;
   }
 
   .box {
     .box-description {
-      width      : 40%;
-      color      : #fff;
+      width: 40%;
+      color: #fff;
       line-height: 1.5rem;
 
       .name {
-        font-size    : 2.3rem;
-        color        : $green-color;
+        font-size: 2.3rem;
+        color: $green-color;
         margin-bottom: 1.5rem;
       }
 
@@ -447,7 +477,7 @@ img {
       }
 
       .experience {
-        display        : flex;
+        display: flex;
         justify-content: space-between;
 
         .years-of-experience {
@@ -469,17 +499,22 @@ img {
     margin-bottom: 15em;
 
     .box-img {
-      background-image       : url("../../img/trainer-1.jpg"); // Fallback
-      background-image       : linear-gradient(to bottom right, rgba($charcoal, .3) 100%, rgba($charcoal, .3) 100%), url("../../img/trainer-1.jpg");
-      background-repeat      : no-repeat;
-      background-position    : center center;
+      background-image: url("../../img/trainer-1.jpg"); // Fallback
+      background-image: linear-gradient(
+          to bottom right,
+          rgba($charcoal, 0.3) 100%,
+          rgba($charcoal, 0.3) 100%
+        ),
+        url("../../img/trainer-1.jpg");
+      background-repeat: no-repeat;
+      background-position: center center;
       -webkit-background-size: cover;
-      -moz-background-size   : cover;
-      -o-background-size     : cover;
-      background-size        : cover;
-      border-radius          : 5px;
-      width                  : 50%;
-      height                 : 57em;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      border-radius: 5px;
+      width: 50%;
+      height: 57em;
     }
   }
 
@@ -487,17 +522,22 @@ img {
     margin-bottom: 15em;
 
     .box-img {
-      background-image       : url("../../img/trainer-2.jpg"); // Fallback
-      background-image       : linear-gradient(to bottom right, rgba($charcoal, .3) 100%, rgba($charcoal, .3) 100%), url("../../img/trainer-2.jpg");
-      background-repeat      : no-repeat;
-      background-position    : center center;
+      background-image: url("../../img/trainer-2.jpg"); // Fallback
+      background-image: linear-gradient(
+          to bottom right,
+          rgba($charcoal, 0.3) 100%,
+          rgba($charcoal, 0.3) 100%
+        ),
+        url("../../img/trainer-2.jpg");
+      background-repeat: no-repeat;
+      background-position: center center;
       -webkit-background-size: cover;
-      -moz-background-size   : cover;
-      -o-background-size     : cover;
-      background-size        : cover;
-      border-radius          : 5px;
-      width                  : 50%;
-      height                 : 57em;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      border-radius: 5px;
+      width: 50%;
+      height: 57em;
     }
 
     .box-img + .box-description {
@@ -507,29 +547,34 @@ img {
 
   .box-3 {
     .box-img {
-      background-image       : url("../../img/trainer-3.jpg"); // Fallback
-      background-image       : linear-gradient(to bottom right, rgba($charcoal, .3) 100%, rgba($charcoal, .3) 100%), url("../../img/trainer-3.jpg");
-      background-repeat      : no-repeat;
-      background-position    : top center;
+      background-image: url("../../img/trainer-3.jpg"); // Fallback
+      background-image: linear-gradient(
+          to bottom right,
+          rgba($charcoal, 0.3) 100%,
+          rgba($charcoal, 0.3) 100%
+        ),
+        url("../../img/trainer-3.jpg");
+      background-repeat: no-repeat;
+      background-position: top center;
       -webkit-background-size: cover;
-      -moz-background-size   : cover;
-      -o-background-size     : cover;
-      background-size        : cover;
-      border-radius          : 5px;
-      width                  : 50%;
-      height                 : 57em;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      border-radius: 5px;
+      width: 50%;
+      height: 57em;
     }
   }
 }
 /* Review Styles ***********************/
 #review-section {
-  padding   : 10em 0;
+  padding: 10em 0;
   background: $charcoal;
 
   .review-big-title {
-    text-align   : center;
-    font-size    : 3.5rem;
-    color        : $green-color;
+    text-align: center;
+    font-size: 3.5rem;
+    color: $green-color;
     margin-bottom: 2em;
   }
   // Review Text
@@ -537,48 +582,48 @@ img {
     width: 55%;
 
     .review-title {
-      font-size  : 2.3rem;
+      font-size: 2.3rem;
       font-weight: 600;
       line-height: 3.5rem;
-      color      : #fff;
+      color: #fff;
     }
     // Slider Container
     .slider-btn-container {
       margin-top: 1.5em;
 
       .slider-btn-left {
-        display       : inline-block;
-        font-size     : 1.5rem;
-        text-align    : center;
+        display: inline-block;
+        font-size: 1.5rem;
+        text-align: center;
         vertical-align: middle;
-        width         : 40px;
-        height        : 40px;
-        border-radius : 50%;
-        fill          : $charcoal;
-        background    : $green-color;
-        cursor        : pointer;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        fill: $charcoal;
+        background: $green-color;
+        cursor: pointer;
 
         .icon {
-          width : 50%;
+          width: 50%;
           height: 100%;
         }
       }
 
       .slider-btn-right {
-        display       : inline-block;
-        font-size     : 1.5rem;
-        text-align    : center;
+        display: inline-block;
+        font-size: 1.5rem;
+        text-align: center;
         vertical-align: middle;
-        width         : 40px;
-        height        : 40px;
-        border-radius : 50%;
-        fill          : $charcoal;
-        background    : $green-color;
-        margin-left   : 0.4em;
-        cursor        : pointer;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        fill: $charcoal;
+        background: $green-color;
+        margin-left: 0.4em;
+        cursor: pointer;
 
         .icon {
-          width : 50%;
+          width: 50%;
           height: 100%;
         }
       }
@@ -589,46 +634,46 @@ img {
     width: 40%;
 
     .slider-container {
-      width   : 100%;
-      height  : 300px;
+      width: 100%;
+      height: 300px;
       position: relative;
       // Global Boxes
       .box {
-        display      : inline-block;
-        width        : 100%;
-        background   : $green-color;
-        padding      : 1.5em;
+        display: inline-block;
+        width: 100%;
+        background: $green-color;
+        padding: 1.5em;
         border-radius: 5px;
-        transition   : all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
 
         .review-description-container {
           position: relative;
-          color   : $charcoal;
+          color: $charcoal;
 
           .review-description {
-            font-style : italic;
+            font-style: italic;
             line-height: 1.5rem;
-            margin-top : 2rem;
-            position   : relative;
-            z-index    : 10;
+            margin-top: 2rem;
+            position: relative;
+            z-index: 10;
           }
         }
 
         .reviewer-img {
-          width : 100px;
+          width: 100px;
           height: 100px;
           margin: 3em auto 2em;
 
           img {
-            width        : 100%;
-            height       : 100%;
+            width: 100%;
+            height: 100%;
             border-radius: 50%;
           }
         }
 
         .reviewer-name {
-          font-weight  : 500;
-          text-align   : center;
+          font-weight: 500;
+          text-align: center;
           margin-bottom: 1em;
         }
       }
@@ -636,178 +681,178 @@ img {
       // Box 1
       .box-1 {
         position: absolute;
-        z-index : 30;
+        z-index: 30;
 
         .quote-left {
-          width : 45px;
+          width: 45px;
           height: 45px;
 
           .icon-quotes-left {
-            width : 100%;
+            width: 100%;
             height: 100%;
-            fill  : #fff;
+            fill: #fff;
           }
         }
 
         .quote-right {
-          float : right;
-          width : 45px;
+          float: right;
+          width: 45px;
           height: 45px;
 
           &::after {
             content: "";
-            clear  : both;
+            clear: both;
             display: table;
           }
 
           .icon {
-            width : 100%;
+            width: 100%;
             height: 100%;
-            fill  : #fff;
+            fill: #fff;
           }
         }
       }
       // Box 2
       .box-2 {
         position: absolute;
-        z-index : 20;
+        z-index: 20;
 
         .quote-left {
-          width : 45px;
+          width: 45px;
           height: 45px;
 
           .icon-quotes-left {
-            width : 100%;
+            width: 100%;
             height: 100%;
-            fill  : #fff;
+            fill: #fff;
           }
         }
 
         .quote-right {
-          float : right;
-          width : 45px;
+          float: right;
+          width: 45px;
           height: 45px;
 
           &::after {
             content: "";
-            clear  : both;
+            clear: both;
             display: table;
           }
 
           .icon {
-            width : 100%;
+            width: 100%;
             height: 100%;
-            fill  : #fff;
+            fill: #fff;
           }
         }
       }
       // Box 3
       .box-3 {
         position: absolute;
-        z-index : 10;
+        z-index: 10;
 
         .quote-left {
-          width : 45px;
+          width: 45px;
           height: 45px;
 
           .icon-quotes-left {
-            width : 100%;
+            width: 100%;
             height: 100%;
-            fill  : #fff;
+            fill: #fff;
           }
         }
 
         .quote-right {
-          float : right;
-          width : 45px;
+          float: right;
+          width: 45px;
           height: 45px;
 
           &::after {
             content: "";
-            clear  : both;
+            clear: both;
             display: table;
           }
 
           .icon {
-            width : 100%;
+            width: 100%;
             height: 100%;
-            fill  : #fff;
+            fill: #fff;
           }
         }
       }
       // Box 4
       .box-4 {
         position: absolute;
-        z-index : 0;
+        z-index: 0;
 
         .quote-left {
-          width : 45px;
+          width: 45px;
           height: 45px;
 
           .icon-quotes-left {
-            width : 100%;
+            width: 100%;
             height: 100%;
-            fill  : #fff;
+            fill: #fff;
           }
         }
 
         .quote-right {
-          float : right;
-          width : 45px;
+          float: right;
+          width: 45px;
           height: 45px;
 
           &::after {
             content: "";
-            clear  : both;
+            clear: both;
             display: table;
           }
 
           .icon {
-            width : 100%;
+            width: 100%;
             height: 100%;
-            fill  : #fff;
+            fill: #fff;
           }
         }
       }
     }
     // Slider Container
     .slider-btn-container {
-      display   : none;
+      display: none;
       margin-top: 1.5em;
 
       .slider-btn-left {
-        display       : inline-block;
-        font-size     : 1.5rem;
-        text-align    : center;
+        display: inline-block;
+        font-size: 1.5rem;
+        text-align: center;
         vertical-align: middle;
-        width         : 40px;
-        height        : 40px;
-        border-radius : 50%;
-        fill          : $charcoal;
-        background    : $green-color;
-        cursor        : pointer;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        fill: $charcoal;
+        background: $green-color;
+        cursor: pointer;
 
         .icon {
-          width : 50%;
+          width: 50%;
           height: 100%;
         }
       }
 
       .slider-btn-right {
-        display       : inline-block;
-        font-size     : 1.5rem;
-        text-align    : center;
+        display: inline-block;
+        font-size: 1.5rem;
+        text-align: center;
         vertical-align: middle;
-        width         : 40px;
-        height        : 40px;
-        border-radius : 50%;
-        fill          : $charcoal;
-        background    : $green-color;
-        margin-left   : 0.4em;
-        cursor        : pointer;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        fill: $charcoal;
+        background: $green-color;
+        margin-left: 0.4em;
+        cursor: pointer;
 
         .icon {
-          width : 50%;
+          width: 50%;
           height: 100%;
         }
       }
@@ -820,42 +865,47 @@ img {
 }
 /* Plan Styles ***********************/
 #plan-section {
-  padding                : 10em 0; // Fallback
-  background             : $charcoal;
-  background-image       : linear-gradient(to bottom right, rgba($charcoal, .7) 100%, rgba($charcoal, .7) 100%), url("../../img/plan-bg-img.jpg");
-  background-repeat      : no-repeat;
-  background-position    : center center;
+  padding: 10em 0; // Fallback
+  background: $charcoal;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba($charcoal, 0.7) 100%,
+      rgba($charcoal, 0.7) 100%
+    ),
+    url("../../img/plan-bg-img.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
   -webkit-background-size: cover;
-  -moz-background-size   : cover;
-  -o-background-size     : cover;
-  background-size        : cover;
-  border-radius          : 5px;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border-radius: 5px;
 
   .plan-big-title {
-    text-align   : center;
-    color        : $green-color;
-    font-size    : 3.5rem;
+    text-align: center;
+    color: $green-color;
+    font-size: 3.5rem;
     margin-bottom: 2em;
   }
 
   .plan-grid-container {
-    display              : grid;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap             : 5em;
+    grid-gap: 5em;
     // Global Box
     .box {
-      color        : #fff;
-      padding      : 2em;
+      color: #fff;
+      padding: 2em;
       border-radius: 5px;
 
       .plan-title {
-        font-size    : 1.2rem;
+        font-size: 1.2rem;
         margin-bottom: 0.6em;
       }
 
       .price {
-        font-size    : 1.9rem;
-        font-weight  : 500;
+        font-size: 1.9rem;
+        font-weight: 500;
         margin-bottom: 0.6em;
       }
 
@@ -869,88 +919,88 @@ img {
     }
     // Individual Boxes
     .box-1 {
-      color     : $charcoal;
+      color: $charcoal;
       background: #fff;
 
       .join-btn {
-        color        : #fff;
-        padding      : 0.7em 1.2em;
+        color: #fff;
+        padding: 0.7em 1.2em;
         border-radius: 5px;
-        background   : $charcoal;
-        margin-top   : 6em;
+        background: $charcoal;
+        margin-top: 6em;
       }
     }
 
     .box-2 {
-      color     : $charcoal;
+      color: $charcoal;
       background: $green-color;
 
       .join-btn {
-        color        : #fff;
-        padding      : 0.7em 1.2em;
+        color: #fff;
+        padding: 0.7em 1.2em;
         border-radius: 5px;
-        background   : $charcoal;
-        margin-top   : 1.9em;
+        background: $charcoal;
+        margin-top: 1.9em;
       }
     }
 
     .box-3 {
-      color     : $charcoal;
+      color: $charcoal;
       background: #fff;
 
       .join-btn {
-        color        : #fff;
-        padding      : 0.7em 1.2em;
+        color: #fff;
+        padding: 0.7em 1.2em;
         border-radius: 5px;
-        background   : $charcoal;
-        margin-top   : 2em;
+        background: $charcoal;
+        margin-top: 2em;
       }
     }
   }
 }
 /* Contact Styles ***********************/
 #contact-section {
-  padding   : 10em 0;
+  padding: 10em 0;
   background: $charcoal;
 
   .contact-big-title {
-    text-align   : center;
-    color        : $green-color;
-    font-size    : 3.5rem;
+    text-align: center;
+    color: $green-color;
+    font-size: 3.5rem;
     margin-bottom: 2em;
   }
 
   .contact-form {
-    width  : 60%;
+    width: 60%;
     padding: 2em;
-    margin : 0 auto;
+    margin: 0 auto;
 
     label {
-      color      : $green-color;
+      color: $green-color;
       line-height: 2rem;
     }
 
     .input-container {
-      height       : 2.5em;
-      background   : #fff;
+      height: 2.5em;
+      background: #fff;
       border-radius: 5px;
-      border       : 1px solid rgba(0, 255, 0, 0);
-      transition   : border 0.3s ease-in-out;
+      border: 1px solid rgba(0, 255, 0, 0);
+      transition: border 0.3s ease-in-out;
 
       &:hover {
         border: 1px solid rgba(0, 255, 0, 1);
       }
 
       input {
-        font-size  : 0.9rem;
-        width      : 95%;
-        height     : 100%;
+        font-size: 0.9rem;
+        width: 95%;
+        height: 100%;
         margin-left: 1em;
-        outline    : none;
-        border     : 0;
+        outline: none;
+        border: 0;
 
         &::-moz-focus-inner {
-          border : 0;
+          border: 0;
           outline: none;
         }
       }
@@ -973,67 +1023,67 @@ img {
     }
 
     .email-container {
-      height       : 2.5em;
-      width        : 100%;
+      height: 2.5em;
+      width: 100%;
       margin-bottom: 1em;
-      background   : #fff;
+      background: #fff;
       border-radius: 5px;
 
       input {
-        width      : 98%;
-        height     : 100%;
+        width: 98%;
+        height: 100%;
         margin-left: 1em;
-        outline    : none;
-        border     : 0;
+        outline: none;
+        border: 0;
 
         &::-moz-focus-inner {
-          border : 0;
+          border: 0;
           outline: none;
         }
       }
     }
 
     .message-container {
-      height       : 15em;
-      width        : 100%;
+      height: 15em;
+      width: 100%;
       margin-bottom: 1em;
-      background   : #fff;
+      background: #fff;
       border-radius: 5px;
 
       textarea {
-        font-family: 'Montserrat', sans-serif;
-        font-size  : 0.9rem;
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.9rem;
         font-weight: 500;
-        color      : $dark-color;
-        width      : 98%;
-        height     : 92%;
-        margin     : 1.2em 0 0 1em;
-        resize     : none;
-        border     : 0;
-        outline    : none;
+        color: $dark-color;
+        width: 98%;
+        height: 92%;
+        margin: 1.2em 0 0 1em;
+        resize: none;
+        border: 0;
+        outline: none;
 
         &::-moz-focus-inner {
-          border : 0;
+          border: 0;
           outline: none;
         }
       }
     }
 
     .submit-btn {
-      font-family  : 'Montserrat', sans-serif;
-      font-size    : 0.9rem;
-      font-weight  : 500;
-      color        : $dark-color;
-      padding      : 0.7em 1.2em;
-      border       : 0;
-      outline      : none;
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: $dark-color;
+      padding: 0.7em 1.2em;
+      border: 0;
+      outline: none;
       border-radius: 5px;
-      cursor       : pointer;
-      background   : #fff;
-      transition   : all 0.3s ease-in-out;
+      cursor: pointer;
+      background: #fff;
+      transition: all 0.3s ease-in-out;
 
       &:hover {
-        color     : $charcoal;
+        color: $charcoal;
         background: $green-color;
       }
     }
@@ -1041,16 +1091,16 @@ img {
 }
 /* Footer Styles ***********************/
 #footer-section {
-  padding   : 5em 0 3em;
+  padding: 5em 0 3em;
   background: $green-color;
 
   .footer-container {
-    width    : 60%;
+    width: 60%;
     max-width: 1400px;
-    margin   : 0 auto;
+    margin: 0 auto;
 
     .footer-grid {
-      display              : grid;
+      display: grid;
       grid-template-columns: repeat(3, 2fr);
       // Global Box
       .box {
@@ -1085,7 +1135,7 @@ img {
         }
 
         .footer-row {
-          display        : flex;
+          display: flex;
           justify-content: center;
         }
       }
@@ -1096,7 +1146,7 @@ img {
         }
 
         .footer-row {
-          display        : flex;
+          display: flex;
           justify-content: flex-end;
         }
       }
@@ -1109,93 +1159,98 @@ img {
 }
 /****************************** Login and Signup Page Styles ******************************/
 #login-signup-section {
-  height                 : 105vh;
-  background             : $charcoal; // Fallback
-  background-image       : url("../../img/signup-bg-img.jpg"); // Fallback
-  background-image       : linear-gradient(to bottom right, rgba($charcoal, .5) 100%, rgba($charcoal, .5) 100%), url("../../img/signup-bg-img.jpg");
-  background-repeat      : no-repeat;
+  height: 105vh;
+  background: $charcoal; // Fallback
+  background-image: url("../../img/signup-bg-img.jpg"); // Fallback
+  background-image: linear-gradient(
+      to bottom right,
+      rgba($charcoal, 0.5) 100%,
+      rgba($charcoal, 0.5) 100%
+    ),
+    url("../../img/signup-bg-img.jpg");
+  background-repeat: no-repeat;
   -webkit-background-size: cover;
-  -moz-background-size   : cover;
-  -o-background-size     : cover;
-  background-size        : cover;
-  margin-top             : -6em;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-top: -6em;
 
   .login-signup-row {
-    width        : 80%;
-    height       : 40em;
-    margin       : 0 auto;
-    position     : relative;
+    width: 80%;
+    height: 40em;
+    margin: 0 auto;
+    position: relative;
     border-radius: 5px;
     // login and sign toggle button
     .login-and-sigup-btn {
-      color    : $dark-color;
-      position : absolute;
-      top      : -3%;
-      left     : 50%;
+      color: $dark-color;
+      position: absolute;
+      top: -3%;
+      left: 50%;
       transform: translate(-46%, 0);
-      z-index  : 100;
+      z-index: 1;
       // Toggle Login
       .toggle-login {
-        padding                  : 0.5em 0.4em 0.5em 1em;
-        border-right             : 1px solid #fff;
-        border-top-left-radius   : 50px;
+        padding: 0.5em 0.4em 0.5em 1em;
+        border-right: 1px solid #fff;
+        border-top-left-radius: 50px;
         border-bottom-left-radius: 50px;
-        background               : rgba(0, 255, 0, .8);
-        cursor                   : pointer;
-        transition               : background 0.3s ease-in-out;
+        background: rgba(0, 255, 0, 0.8);
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
 
         &:hover {
-          background: rgba(0, 255, 0, .9);
+          background: rgba(0, 255, 0, 0.9);
         }
       }
       // Toggle Signup
       .toggle-signup {
-        padding                   : 0.5em 1em 0.5em 0.4em;
-        border-top-right-radius   : 50px;
+        padding: 0.5em 1em 0.5em 0.4em;
+        border-top-right-radius: 50px;
         border-bottom-right-radius: 50px;
-        background                : rgba(0, 255, 0, .8);
-        cursor                    : pointer;
-        transition                : background 0.3s ease-in-out;
+        background: rgba(0, 255, 0, 0.8);
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
 
         &:hover {
-          background: rgba(0, 255, 0, .9);
+          background: rgba(0, 255, 0, 0.9);
         }
       }
     }
     // Login
     .login {
-      width                    : 50%;
-      height                   : inherit;
-      background               : rgba(0, 255, 0, .6);
-      border-top-left-radius   : 5px;
+      width: 50%;
+      height: inherit;
+      background: rgba(0, 255, 0, 0.6);
+      border-top-left-radius: 5px;
       border-bottom-left-radius: 5px;
-      transition               : background 0.3s ease-in-out;
-      transform                : rotate(0.0001deg);
+      transition: background 0.3s ease-in-out;
+      transform: rotate(0.0001deg);
 
       .center-login {
-        width : 60%;
+        width: 60%;
         margin: 40% auto;
 
         label {
-          color      : $dark-color;
+          color: $dark-color;
           line-height: 1.5rem;
         }
 
         .input-container {
-          width        : 100%;
-          height       : 2.5em;
-          background   : #fff;
+          width: 100%;
+          height: 2.5em;
+          background: #fff;
           border-radius: 5px;
 
           input {
-            width      : 95%;
-            height     : 100%;
+            width: 95%;
+            height: 100%;
             margin-left: 1em;
-            border     : 0;
-            outline    : none;
+            border: 0;
+            outline: none;
 
             &::-moz-focus-inner {
-              border : 0;
+              border: 0;
               outline: none;
             }
           }
@@ -1210,20 +1265,20 @@ img {
         }
         // Login Btn
         .login-form-btn {
-          font-family  : 'Montserrat', sans-serif;
-          font-size    : 0.9rem;
-          font-weight  : 500;
-          color        : $dark-color;
-          padding      : 0.7em 1.2em;
-          border       : 0;
-          outline      : none;
+          font-family: "Montserrat", sans-serif;
+          font-size: 0.9rem;
+          font-weight: 500;
+          color: $dark-color;
+          padding: 0.7em 1.2em;
+          border: 0;
+          outline: none;
           border-radius: 5px;
-          cursor       : pointer;
-          background   : #fff;
-          transition   : background 0.3s ease-in-out;
+          cursor: pointer;
+          background: #fff;
+          transition: background 0.3s ease-in-out;
 
           &:hover {
-            color     : $charcoal;
+            color: $charcoal;
             background: $green-color;
           }
         }
@@ -1231,37 +1286,37 @@ img {
     }
     // Signup
     .signup {
-      height                    : inherit;
-      width                     : 50%;
-      color                     : #fff;
-      background                : rgba(0, 255, 0, .6);
-      border-top-right-radius   : 5px;
+      height: inherit;
+      width: 50%;
+      color: #fff;
+      background: rgba(0, 255, 0, 0.6);
+      border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
-      transition                : background 0.3s ease-in-out;
+      transition: background 0.3s ease-in-out;
 
       .center-signup {
-        width : 60%;
+        width: 60%;
         margin: 30% auto;
 
         label {
-          color      : $dark-color;
+          color: $dark-color;
           line-height: 1.5rem;
         }
 
         .input-container {
-          height       : 2.5em;
-          background   : #fff;
+          height: 2.5em;
+          background: #fff;
           border-radius: 5px;
 
           input {
-            width      : 95%;
-            height     : 100%;
+            width: 95%;
+            height: 100%;
             margin-left: 1em;
-            border     : 0;
-            outline    : none;
+            border: 0;
+            outline: none;
 
             &::-moz-focus-inner {
-              border : 0;
+              border: 0;
               outline: none;
             }
           }
@@ -1281,21 +1336,21 @@ img {
       }
       // Signup Btn
       .signup-form-btn {
-        font-family  : 'Montserrat', sans-serif;
-        font-size    : 0.9rem;
-        font-weight  : 500;
-        color        : $dark-color;
-        padding      : 0.7em 1.2em;
-        border       : 0;
-        outline      : none;
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: $dark-color;
+        padding: 0.7em 1.2em;
+        border: 0;
+        outline: none;
         border-radius: 5px;
-        cursor       : pointer;
-        background   : #fff;
-        transition   : background 0.3s ease-in-out;
-        transform    : rotate(0.0001deg);
+        cursor: pointer;
+        background: #fff;
+        transition: background 0.3s ease-in-out;
+        transform: rotate(0.0001deg);
 
         &:hover {
-          color     : $charcoal;
+          color: $charcoal;
           background: $green-color;
         }
       }
@@ -1303,50 +1358,122 @@ img {
   }
 }
 /*************************************** Media Queries ************************************/
-/* Ipad and Tablet ***********************/
-@media only screen and (max-width: 900px) {
-  html {
-    height    : 100vh;
-    width     : 100%;
-    overflow-x: hidden;
-  }
 
-  body {
-    height    : 100vh;
-    width     : 100%;
-    position  : relative;
-    overflow-x: hidden;
-  }
+/* Laptop with HIDPI screen ***********************/
 
+@media only screen and (max-width: 1440px) {
   .container {
-    width: 95%;
+    width: 80%;
   }
 
   #header-section {
-    position: relative;
-    z-index : 100;
-
     .nav-bar {
-      background: $charcoal;
-
       .link-container {
-        display: none;
-      }
-      // Hamburger
-      .hamburger-menu {
-        display: block;
+        // Links
+        .links {
+          width: 50%;
+
+          .row {
+            justify-content: space-around;
+          }
+        }
+
+        //  Nav Btn
+        .nav-btns {
+          width: 20%;
+        }
       }
     }
   }
-  /* Mobile Menu Styles *************/
-  .mobile-menu {
-    display: block;
+
+  /* Contact Styles *************/
+  #contact-section {
+    // Title
+    .contact-big-title {
+      font-size: 3.2rem;
+    }
+
+    .contact-form {
+      width: 85%;
+      padding: 0;
+
+      .input-container {
+        input {
+          width: 95%;
+        }
+
+        textarea {
+          width: 98%;
+          height: 90%;
+        }
+      }
+
+      .first-last-container {
+        .first-name-container {
+          width: 100%;
+        }
+
+        .last-name-container {
+          width: 100%;
+        }
+      }
+    }
   }
+
+  /************************************************* LogIn And SignUp Media Query Styles *****************************/
+
+  #login-signup-section {
+    height: 1000px;
+
+    .container {
+      width: 75%;
+
+      .center {
+        padding-top: 15em;
+
+        .login-signup-row {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+/* Laptops ***********************/
+
+@media only screen and (max-width: 1280px) {
+  .container {
+    width: 85%;
+  }
+
+  #header-section {
+    .nav-bar {
+      .link-container {
+        // Links
+        .links {
+          width: 50%;
+
+          .row {
+            justify-content: space-around;
+          }
+        }
+
+        //  Nav Btn
+        .nav-btns {
+          width: 20%;
+        }
+      }
+    }
+  }
+
   /* Jumbo Styles *************/
   #jumbo-section {
-    margin-top: 0;
-    height    : auto;
-    padding   : 10% 0;
+    height: auto;
+    padding: 10% 0;
+
+    .container {
+      margin-top: 4em;
+    }
 
     .center {
       padding-top: 0;
@@ -1355,7 +1482,7 @@ img {
         width: 100%;
 
         .jumbo-main-title {
-          font-size    : 3.2rem;
+          font-size: 3.2rem;
           margin-bottom: 0.7em;
         }
       }
@@ -1373,20 +1500,21 @@ img {
       // Video Player
       .video-player {
         width: 90%;
-        top  : 55%;
+        height: 80%;
+        top: 55%;
       }
     }
     // Exit Box
     .exit-box {
-      top  : 10%;
-      right: 5%;
+      top: 5%;
+      right: 2%;
     }
   }
   /* About Styles *************/
   #about-section {
     // About Img
     .about-img {
-      width        : 100%;
+      width: 100%;
       margin-bottom: 5em;
     }
     // About Description
@@ -1415,17 +1543,17 @@ img {
       }
       // Box Description
       .box-description {
-        width        : 100%;
+        width: 100%;
         margin-bottom: 5em;
 
         .name {
-          font-size  : 2.2rem;
+          font-size: 2.2rem;
           line-height: 2.5rem;
         }
       }
       // Box Img
       .box-img {
-        width : 100%;
+        width: 100%;
         height: 50em;
       }
 
@@ -1451,7 +1579,7 @@ img {
     }
 
     .review-text {
-      width        : 100%;
+      width: 100%;
       margin-bottom: 4em;
     }
 
@@ -1485,12 +1613,12 @@ img {
       .box-3 {
         .review-description-container {
           .quote-left {
-            top : -26%;
+            top: -26%;
             left: -1%;
           }
 
           .quote-right {
-            top  : 60%;
+            top: 60%;
             right: 91%;
           }
         }
@@ -1499,12 +1627,12 @@ img {
       .box-4 {
         .review-description-container {
           .quote-left {
-            top : -40%;
+            top: -40%;
             left: -1%;
           }
 
           .quote-right {
-            top  : 48%;
+            top: 48%;
             right: 40%;
           }
         }
@@ -1523,7 +1651,7 @@ img {
     }
 
     .plan-grid-container {
-      grid-template-columns: 1fr;
+      gap: 3em;
     }
   }
   /* Contact Styles *************/
@@ -1534,7 +1662,7 @@ img {
     }
 
     .contact-form {
-      width  : 100%;
+      width: 85%;
       padding: 0;
 
       .input-container {
@@ -1543,7 +1671,8 @@ img {
         }
 
         textarea {
-          width: 95%;
+          width: 98%;
+          height: 90%;
         }
       }
 
@@ -1554,10 +1683,6 @@ img {
 
         .last-name-container {
           width: 100%;
-        }
-
-        .first-name-container + .last-name-container {
-          margin-left: 0;
         }
       }
     }
@@ -1575,19 +1700,602 @@ img {
       }
     }
   }
+
+  /************************************************* LogIn And SignUp Media Query Styles *****************************/
+
+  #login-signup-section {
+    height: 1000px;
+
+    .container {
+      width: 75%;
+
+      .center {
+        padding-top: 15em;
+
+        .login-signup-row {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
-/* Phone ***********************/
-@media only screen and (max-width: 600px) {
+
+/* iPad Pro ***********************/
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    width: 85%;
+  }
+
+  #header-section {
+    .nav-bar {
+      .link-container {
+        // Links
+        .links {
+          width: 55%;
+
+          .row {
+            justify-content: space-around;
+          }
+        }
+
+        //  Nav Btn
+        .nav-btns {
+          width: 21%;
+        }
+      }
+    }
+  }
+
+  /* Jumbo Styles *************/
+  #jumbo-section {
+    height: auto;
+    padding: 10% 0;
+
+    .container {
+      margin-top: 4em;
+    }
+
+    .center {
+      padding-top: 0;
+      // Jumbo Text
+      .jumbo-text {
+        width: 100%;
+
+        .jumbo-main-title {
+          font-size: 3.2rem;
+          margin-bottom: 0.7em;
+        }
+      }
+      // Placeholder Video
+      .placeholder-video {
+        width: 100%;
+      }
+
+      .jumbo-text + .placeholder-video {
+        margin-left: 2em;
+      }
+    }
+    // Jumbo Video Box
+    .video-box {
+      // Video Player
+      .video-player {
+        width: 90%;
+        height: 80%;
+        top: 55%;
+      }
+    }
+    // Exit Box
+    .exit-box {
+      top: 5%;
+      right: 2%;
+    }
+  }
+  /* About Styles *************/
+  #about-section {
+    // About Img
+    .about-img {
+      width: 100%;
+      margin-bottom: 5em;
+    }
+    // About Description
+    .about-description {
+      width: 100%;
+
+      .about-title {
+        font-size: 3.2rem;
+      }
+    }
+
+    .about-img + .about-description {
+      margin-left: 2em;
+    }
+  }
+  /* Our Team Styles *************/
+  #our-team-section {
+    // Title
+    .team-main-title {
+      font-size: 3.2rem;
+    }
+    // Box
+    .box {
+      &:not(:last-child) {
+        margin-bottom: 10em;
+      }
+      // Box Description
+      .box-description {
+        width: 100%;
+        margin-bottom: 5em;
+
+        .name {
+          font-size: 2.2rem;
+          line-height: 2.5rem;
+        }
+      }
+      // Box Img
+      .box-img {
+        width: 100%;
+        height: 50em;
+      }
+
+      .box-description + .box-img {
+        margin-left: 2em;
+      }
+    }
+    // Box 2
+    .box-2 {
+      .box-img {
+        margin: 0 0 5em;
+      }
+
+      .box-img + .box-description {
+        margin: 0 0 0 2em;
+      }
+    }
+  }
+  /* Review Styles *************/
+  #review-section {
+    .review-big-title {
+      font-size: 3.2rem;
+    }
+
+    .review-text {
+      width: 100%;
+      margin-bottom: 4em;
+    }
+
+    .review-grid {
+      width: 100%;
+
+      .box-1 {
+        .review-description-container {
+          .quote-left {
+            left: -1%;
+          }
+
+          .quote-right {
+            right: 10%;
+          }
+        }
+      }
+
+      .box-2 {
+        .review-description-container {
+          .quote-left {
+            left: -1%;
+          }
+
+          .quote-right {
+            right: 86%;
+          }
+        }
+      }
+
+      .box-3 {
+        .review-description-container {
+          .quote-left {
+            top: -26%;
+            left: -1%;
+          }
+
+          .quote-right {
+            top: 60%;
+            right: 91%;
+          }
+        }
+      }
+
+      .box-4 {
+        .review-description-container {
+          .quote-left {
+            top: -40%;
+            left: -1%;
+          }
+
+          .quote-right {
+            top: 48%;
+            right: 40%;
+          }
+        }
+      }
+    }
+
+    .review-text + .review-grid {
+      margin-left: 2em;
+    }
+  }
+  /* Plan Styles *************/
+  #plan-section {
+    // Title
+    .plan-big-title {
+      font-size: 3.2rem;
+    }
+
+    .plan-grid-container {
+      gap: 3em;
+    }
+  }
+  /* Contact Styles *************/
+  #contact-section {
+    // Title
+    .contact-big-title {
+      font-size: 3.2rem;
+    }
+
+    .contact-form {
+      width: 85%;
+      padding: 0;
+
+      .input-container {
+        input {
+          width: 95%;
+        }
+
+        textarea {
+          width: 50%;
+        }
+      }
+
+      .first-last-container {
+        .first-name-container {
+          width: 100%;
+        }
+
+        .last-name-container {
+          width: 100%;
+        }
+      }
+    }
+  }
+  /* Footer Styles *************/
+  #footer-section {
+    .footer-container {
+      width: 90%;
+
+      .footer-grid {
+        // grid-template-columns: 1fr;
+        .box + .box {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  /************************************************* LogIn And SignUp Media Query Styles *****************************/
+
+  #login-signup-section {
+    height: 1200px;
+
+    .container {
+      width: 80%;
+
+      .center {
+        padding-top: 20em;
+
+        .login-signup-row {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+/* iPad, and Tablet ***********************/
+
+@media only screen and (max-width: 770px) {
   html {
-    height    : 100vh;
-    width     : 100%;
+    height: 100vh;
+    width: 100%;
     overflow-x: hidden;
   }
 
   body {
-    height    : 100vh;
-    width     : 100%;
-    position  : relative;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  #header-section {
+    position: relative;
+    z-index: 100;
+
+    .nav-bar {
+      background: $charcoal;
+
+      .link-container {
+        display: none;
+      }
+      // Hamburger
+      .hamburger-menu {
+        display: block;
+      }
+    }
+  }
+  // /* Mobile Menu Styles *************/
+  .mobile-menu {
+    display: block;
+  }
+
+  /* Jumbo Styles *************/
+  #jumbo-section {
+    margin-top: 0;
+    height: auto;
+    padding: 10% 0;
+
+    .center {
+      padding-top: 0;
+      // Jumbo Text
+      .jumbo-text {
+        width: 100%;
+
+        .jumbo-main-title {
+          font-size: 3.2rem;
+          margin-bottom: 0.7em;
+        }
+      }
+      // Placeholder Video
+      .placeholder-video {
+        width: 100%;
+      }
+
+      .jumbo-text + .placeholder-video {
+        margin-left: 2em;
+      }
+    }
+    // Jumbo Video Box
+    .video-box {
+      // Video Player
+      .video-player {
+        width: 90%;
+        top: 55%;
+      }
+    }
+    // Exit Box
+    .exit-box {
+      top: 8%;
+      right: 5%;
+    }
+  }
+  /* About Styles *************/
+  #about-section {
+    // About Img
+    .about-img {
+      width: 100%;
+      margin-bottom: 5em;
+    }
+    // About Description
+    .about-description {
+      width: 100%;
+
+      .about-title {
+        font-size: 3.2rem;
+      }
+    }
+
+    .about-img + .about-description {
+      margin-left: 2em;
+    }
+  }
+  /* Our Team Styles *************/
+  #our-team-section {
+    // Title
+    .team-main-title {
+      font-size: 3.2rem;
+    }
+    // Box
+    .box {
+      &:not(:last-child) {
+        margin-bottom: 10em;
+      }
+      // Box Description
+      .box-description {
+        width: 100%;
+        margin-bottom: 5em;
+
+        .name {
+          font-size: 2.2rem;
+          line-height: 2.5rem;
+        }
+      }
+      // Box Img
+      .box-img {
+        width: 100%;
+        height: 50em;
+      }
+
+      .box-description + .box-img {
+        margin-left: 2em;
+      }
+    }
+    // Box 2
+    .box-2 {
+      .box-img {
+        margin: 0 0 5em;
+      }
+
+      .box-img + .box-description {
+        margin: 0 0 0 2em;
+      }
+    }
+  }
+  /* Review Styles *************/
+  #review-section {
+    .review-big-title {
+      font-size: 3.2rem;
+    }
+
+    .review-text {
+      width: 100%;
+    }
+
+    .review-grid {
+      width: 100%;
+      margin-top: -5em;
+
+      .box-1 {
+        .review-description-container {
+          .quote-left {
+            left: -1%;
+          }
+
+          .quote-right {
+            right: 10%;
+          }
+        }
+      }
+
+      .box-2 {
+        .review-description-container {
+          .quote-left {
+            left: -1%;
+          }
+
+          .quote-right {
+            right: 86%;
+          }
+        }
+      }
+
+      .box-3 {
+        .review-description-container {
+          .quote-left {
+            top: -26%;
+            left: -1%;
+          }
+
+          .quote-right {
+            top: 60%;
+            right: 91%;
+          }
+        }
+      }
+
+      .box-4 {
+        .review-description-container {
+          .quote-left {
+            top: -40%;
+            left: -1%;
+          }
+
+          .quote-right {
+            top: 48%;
+            right: 40%;
+          }
+        }
+      }
+    }
+  }
+  /* Plan Styles *************/
+  #plan-section {
+    // Title
+    .plan-big-title {
+      font-size: 3.2rem;
+    }
+
+    .plan-grid-container {
+      // grid-template-columns: 1fr;
+      gap: 2em;
+    }
+  }
+  /* Contact Styles *************/
+  #contact-section {
+    // Title
+    .contact-big-title {
+      font-size: 3.2rem;
+    }
+
+    .contact-form {
+      width: 85%;
+      padding: 0;
+
+      .input-container {
+        input {
+          width: 95%;
+        }
+
+        textarea {
+          width: 50%;
+        }
+      }
+
+      .first-last-container {
+        .first-name-container {
+          width: 100%;
+        }
+
+        .last-name-container {
+          width: 100%;
+        }
+      }
+    }
+  }
+  /* Footer Styles *************/
+  #footer-section {
+    .footer-container {
+      width: 90%;
+
+      .footer-grid {
+        // grid-template-columns: 1fr;
+        .box + .box {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  /************************************************* LogIn And SignUp Media Query Styles *****************************/
+
+  #login-signup-section {
+    .container {
+      width: 80%;
+
+      .center {
+        padding-top: 18em;
+
+        .login-signup-row {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+/* Phone ***********************/
+@media only screen and (max-width: 600px) {
+  html {
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    height: 100vh;
+    width: 100%;
+    position: relative;
     overflow-x: hidden;
   }
 
@@ -1601,7 +2309,7 @@ img {
 
   #header-section {
     position: relative;
-    z-index : 100;
+    z-index: 100;
 
     .nav-bar {
       background: $charcoal;
@@ -1622,18 +2330,18 @@ img {
   /* Jumbo Styles *************/
   #jumbo-section {
     margin-top: 0;
-    height    : auto;
-    padding   : 10% 0;
+    height: auto;
+    padding: 10% 0;
 
     .center {
       padding-top: 0;
       // Jumbo Text
       .jumbo-text {
-        width        : 100%;
+        width: 100%;
         margin-bottom: 5em;
 
         .jumbo-main-title {
-          font-size    : 3.2rem;
+          font-size: 3.2rem;
           margin-bottom: 0.7em;
         }
       }
@@ -1651,12 +2359,12 @@ img {
       // Video Player
       .video-player {
         width: 90%;
-        top  : 55%;
+        top: 55%;
       }
     }
     // Exit Box
     .exit-box {
-      top  : 10%;
+      top: 7%;
       right: 5%;
     }
   }
@@ -1664,7 +2372,7 @@ img {
   #about-section {
     // About Img
     .about-img {
-      width        : 100%;
+      width: 100%;
       margin-bottom: 5em;
     }
     // About Description
@@ -1685,7 +2393,7 @@ img {
     // Title
     .team-main-title {
       text-align: left;
-      font-size : 3.2rem;
+      font-size: 3.2rem;
     }
     // Box
     .box {
@@ -1694,11 +2402,11 @@ img {
       }
       // Box Description
       .box-description {
-        width        : 100%;
+        width: 100%;
         margin-bottom: 5em;
 
         .name {
-          font-size  : 2.2rem;
+          font-size: 2.2rem;
           line-height: 2.5rem;
         }
       }
@@ -1729,8 +2437,7 @@ img {
     }
 
     .review-text {
-      width        : 100%;
-      margin-bottom: 4em;
+      width: 100%;
 
       .slider-btn-container {
         display: none;
@@ -1739,6 +2446,7 @@ img {
 
     .review-grid {
       width: 100%;
+      margin-top: 3em;
 
       .box-1 {
         .review-description-container {
@@ -1767,12 +2475,12 @@ img {
       .box-3 {
         .review-description-container {
           .quote-left {
-            top : -26%;
+            top: -26%;
             left: -1%;
           }
 
           .quote-right {
-            top  : 60%;
+            top: 60%;
             right: 91%;
           }
         }
@@ -1781,21 +2489,25 @@ img {
       .box-4 {
         .review-description-container {
           .quote-left {
-            top : -40%;
+            top: -40%;
             left: -1%;
           }
 
           .quote-right {
-            top  : 48%;
+            top: 48%;
             right: 40%;
           }
         }
       }
 
       .slider-btn-container {
-        display   : block;
+        display: block;
         margin-top: 8em;
       }
+    }
+
+    .review-text + .review-grid {
+      margin-left: 0;
     }
   }
   /* Plan Styles *************/
@@ -1817,7 +2529,7 @@ img {
     }
 
     .contact-form {
-      width  : 100%;
+      width: 100%;
       padding: 0;
 
       .input-container {
@@ -1851,9 +2563,55 @@ img {
       width: 90%;
 
       .footer-grid {
-        // grid-template-columns: 1fr;
         .box + .box {
           margin-left: 0;
+        }
+      }
+    }
+  }
+
+  /************************************************* LogIn And SignUp Media Query Styles *****************************/
+
+  #login-signup-section {
+    height: 1200px;
+
+    .container {
+      width: 90%;
+
+      .center {
+        padding-top: 15em;
+
+        .login-signup-row {
+          width: 100%;
+
+          .login-and-sigup-btn {
+            .toggle-login {
+              width: 50%;
+            }
+            .toggle-signup {
+              width: 50%;
+            }
+          }
+
+          .login {
+            width: 100%;
+            height: 70%;
+
+            .center-login {
+              width: 90%;
+              margin: 20% auto;
+            }
+          }
+
+          .signup {
+            width: 100%;
+            height: 70%;
+
+            .center-signup {
+              width: 90%;
+              margin: 15% auto;
+            }
+          }
         }
       }
     }
